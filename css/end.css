@@ -46,3 +46,15 @@ a:hover {
     justify-content: center;
     text-transform: uppercase;
 }
+
+.broken {
+    width: 25%;
+    height: auto;
+    margin-top: 3em;
+}
+
+.brokencam {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
