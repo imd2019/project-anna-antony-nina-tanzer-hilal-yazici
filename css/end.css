@@ -12,9 +12,17 @@ h1 {
     text-align: center;
     color: #ffffff;
     width: 100%;
-    align-items: center;
     font-family: 'Source Code', 'Courier New', Courier, monospace;
-    height: 10em;
+    width: 65%;
+    margin-bottom: 2em;
+    margin-top: 5em;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 a {
