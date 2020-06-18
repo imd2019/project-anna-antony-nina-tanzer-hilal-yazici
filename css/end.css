@@ -1,0 +1,48 @@
+body {
+    background-color: #000000;
+    display: flex;
+    color: #ffffff;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    display: flex;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    align-items: center;
+    font-family: 'Source Code', 'Courier New', Courier, monospace;
+    height: 10em;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 28px;
+    font-family: 'Source Code', 'Courier New', Courier, monospace;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1em;
+    border-width: 5px;
+    border-color: #ffffff;
+}
+
+a:hover {
+    color: red;
+}
+
+.erneut {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.startscreen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-transform: uppercase;
+}
