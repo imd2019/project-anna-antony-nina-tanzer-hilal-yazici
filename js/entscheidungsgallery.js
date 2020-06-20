@@ -11,7 +11,7 @@ span.onclick = function() {
     modal.style.display = "none";
 };
 
-function checkgps() {
+function checktracking() {
     var checkBox = document.getElementById("gps");
     var text = document.getElementById("gpstext");
     if (checkBox.checked == true) {
