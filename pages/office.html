@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safety First</title>
+    <link href="../css/office.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="ordner">
+        <img src="../assets/ordner_1.png" class="ordner1" />
+        <img src="../assets/ordner_1.png" class="ordner2" />
+        <img src="../assets/ordner_1.png" class="ordner3" />
+        <img src="../assets/ordner_1.png" class="ordner4" />
+        <img src="../assets/ordner_1.png" onclick="myFunction()" class="ordner5" id="rotatedimage" />
+    </div>
+</body>
+
+<script>
+    function myFunction() {
+        var img = document.getElementById("rotatedimage");
+        img.setAttribute("class", "rotated-image");
+    }
+</script>
+
+</html>

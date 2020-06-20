@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+}
+
+.bg {
+    background-image: url(../assets/bg_desk_empty.png);
+    height: 820px;
+    width: 1440px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    z-index: 1;
+}
+
+
+/* ################################# ORDNER ########################################## */
+
+.ordner {
+    display: flex;
+    z-index: 2;
+}
+
+.ordner1:hover {
+    transform: scale(1.1);
+}
+
+.ordner1 {
+    height: 150px;
+    width: 50px;
+    z-index: 3;
+    margin-left: 990px;
+    margin-top: 350px;
+}
+
+.ordner2 {
+    height: 150px;
+    width: 50px;
+    z-index: 4;
+    margin-left: 10px;
+    margin-top: 350px;
+}
+
+.ordner3 {
+    height: 150px;
+    width: 50px;
+    z-index: 4;
+    margin-left: 10px;
+    margin-top: 350px;
+}
+
+.ordner4 {
+    height: 150px;
+    width: 50px;
+    z-index: 4;
+    margin-left: 10px;
+    margin-top: 350px;
+}
+
+.ordner5 {
+    height: 150px;
+    width: 50px;
+    z-index: 4;
+    margin-left: 10px;
+    margin-top: 350px;
+}
+
+.ordner5:hover {
+    transform: scale(1.1);
+}
+
+.rotated-image {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    height: 150px;
+    width: 50px;
+    z-index: 5;
+    margin-left: 50px;
+    margin-top: 400px;
+}
+
+
+/* ################################# PAPIERE ########################################## */
