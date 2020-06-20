@@ -84,3 +84,68 @@ body {
 
 
 /* ################################# PAPIERE ########################################## */
+
+.papiere {
+    display: flex;
+    z-index: 6;
+}
+
+.papier1 {
+    z-index: 7;
+    margin-left: -260px;
+    margin-top: 570px;
+    height: 70px;
+    width: 120px;
+}
+
+.papier1:hover {
+    transform: scale(1.1);
+}
+
+.papier2 {
+    z-index: 7;
+    margin-left: -100px;
+    margin-top: 520px;
+    height: 90px;
+    width: 110px;
+}
+
+.papier2:hover {
+    transform: scale(1.1);
+}
+
+.papier3 {
+    z-index: 7;
+    margin-left: 20px;
+    margin-top: 550px;
+    height: 80px;
+    width: 70px;
+}
+
+.papier3:hover {
+    transform: scale(1.1);
+}
+
+.papier4 {
+    z-index: 7;
+    margin-left: -35px;
+    margin-top: 550px;
+    height: 80px;
+    width: 90px;
+}
+
+.papier4:hover {
+    transform: scale(1.1);
+}
+
+.papier5 {
+    z-index: 7;
+    margin-left: -35px;
+    margin-top: 580px;
+    height: 80px;
+    width: 100px;
+}
+
+.papier5:hover {
+    transform: scale(1.1);
+}
