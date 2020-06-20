@@ -10,6 +10,13 @@
 
 <body>
     <div class="bg"></div>
+    <div class="pctext">
+        <ul>
+            <li id="gpstext">GPS-Tracking ✓</li>
+            <li id="datenhinterlegungtext">Datenhinterlegung ✓</li>
+            <li id="keintrackingtext">Kein Tracking ✖</li>
+        </ul>
+    </div>
     <div class="ordner">
         <img src="../assets/ordner_1.png" class="ordner1" />
         <img src="../assets/ordner_1.png" class="ordner2" />
@@ -24,15 +31,19 @@
             <img class="modal-content" id="img01" />
             <div class="checkboxes">
                 <label class="container">Keins von beiden
-            <input type="checkbox" checked="checked" />
+            <input type="checkbox" id="keins" onclick="checktracking()" />
             <span class="checkmark"></span>
           </label>
                 <label class="container">Datenhinterlegung am Zielort
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              id="datenhinterlegung"
+              onclick="checktracking()"
+            />
             <span class="checkmark"></span>
           </label>
                 <label class="container">GPS Tracking
-            <input type="checkbox" />
+            <input type="checkbox" id="gps" onclick="checktracking()" />
             <span class="checkmark"></span>
           </label>
             </div>
