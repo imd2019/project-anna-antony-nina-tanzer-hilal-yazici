@@ -25,11 +25,11 @@ body {
     width: 300px;
 }
 
-ul {
+.pclist {
     width: 300px;
 }
 
-li {
+.pclist li {
     display: none;
 }
 
@@ -44,6 +44,8 @@ li {
 
 .ordner1:hover {
     transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .ordner1 {
@@ -171,13 +173,21 @@ li {
 
 /* ################################# PAPIERE ENTSCHEIDUNGEN ########################################## */
 
-#myImg {
+#myImg,
+#myImg2,
+#myImg3,
+#myImg4,
+#myImg5 {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-#myImg:hover {
+#myImg:hover,
+#myImg2:hover,
+#myImg3:hover,
+#myImg4:hover,
+#myImg5:hover {
     opacity: 0.7;
 }
 
@@ -223,12 +233,6 @@ li {
 
 /* Add Animation - Zoom in the Modal */
 
-.modal-content,
-#caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
 @keyframes zoom {
     from {
         transform: scale(0);
@@ -241,7 +245,11 @@ li {
 
 /* The Close Button */
 
-.close {
+.close,
+.close2,
+.close3,
+.close4,
+.close5 {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -252,7 +260,15 @@ li {
 }
 
 .close:hover,
-.close:focus {
+.close:focus,
+.close2:hover,
+.close2:focus,
+.close3:hover,
+.close3:focus,
+.close4:hover,
+.close4:focus,
+.close5:hover,
+.close5:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
