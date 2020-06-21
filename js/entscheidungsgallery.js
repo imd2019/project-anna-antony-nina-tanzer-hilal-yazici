@@ -14,6 +14,7 @@ span.onclick = function() {
 function checktracking() {
     var checkBox = document.getElementById("gps");
     var text = document.getElementById("gpstext");
+
     if (checkBox.checked == true) {
         text.style.display = "block";
     } else {
@@ -22,6 +23,7 @@ function checktracking() {
 
     var checkBox2 = document.getElementById("datenhinterlegung");
     var text2 = document.getElementById("datenhinterlegungtext");
+
     if (checkBox2.checked == true) {
         text2.style.display = "block";
     } else {
@@ -34,6 +36,15 @@ function checktracking() {
         text3.style.display = "block";
     } else {
         text3.style.display = "none";
+    }
+}
+
+function checkpost() {
+    var post = document.getElementById("gpspost");
+    if (window.getComputedStyle(text).display === "block") {
+        post.style.display = "block";
+    } else {
+        post.style.display = "none";
     }
 }
 

@@ -20,7 +20,7 @@ body {
 .pctext {
     z-index: 2;
     margin-top: 320px;
-    margin-left: 630px;
+    margin-left: 610px;
     color: white;
     width: 300px;
 }
@@ -40,12 +40,6 @@ body {
     display: flex;
     z-index: 2;
     flex-wrap: nowrap;
-}
-
-.ordner1:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-    transition: 0.3s;
 }
 
 .ordner1 {
@@ -367,7 +361,7 @@ body {
     text-decoration: none;
     color: #b22222;
     z-index: 2;
-    margin-left: -670px;
+    margin-left: -660px;
     margin-top: 450px;
     position: absolute;
 }
