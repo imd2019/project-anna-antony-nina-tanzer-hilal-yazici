@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: "Source Code", "Courier New", Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: black;
+  color: white;
+}
+
+code {
+  font-family: "Source Code", "Courier New", Courier, monospace;
+}
