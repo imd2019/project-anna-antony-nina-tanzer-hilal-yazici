@@ -27,6 +27,7 @@ function checktracking() {
 
   if (checkBox2.checked == true) {
     text2.style.display = "block";
+    localStorage.setItem("datenhinterlegung", "datenpost");
   } else {
     text2.style.display = "none";
   }

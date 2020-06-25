@@ -25,6 +25,7 @@
         </p>
       </div>
     </div>
+    <a href="#"><img src="../assets/pfeil.png" class="weiterpfeil" /></a>
     <script src="../js/entscheidungsgallery.js "></script>
     <script>
       var gpspost = localStorage.getItem("gps");
@@ -32,6 +33,12 @@
         document.getElementById("gpspost").style.display = "block";
       } else {
         document.getElementById("gpspost").style.display = "none";
+      }
+      var datenpost = localStorage.getItem("datenhinterlegung");
+      if (datenpost === "datenpost") {
+        document.getElementById("datenpost").style.display = "block";
+      } else {
+        document.getElementById("datenpost").style.display = "none";
       }
     </script>
   </body>

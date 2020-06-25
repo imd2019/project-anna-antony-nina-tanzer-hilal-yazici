@@ -25,8 +25,8 @@ p {
   font-family: "Source Code Pro", monospace;
   position: absolute;
   font-size: 18px;
-  left: 320px;
-  top: 530px;
+  left: 270px;
+  top: 480px;
   white-space: nowrap;
   overflow: hidden;
   border: 5px solid white;
@@ -39,5 +39,5 @@ p {
 img {
   position: relative;
   top: 700px;
-  left: 1300px;
+  left: 1200px;
 }
