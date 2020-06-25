@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  background-color: black;
+}
+
+h1 {
+  color: aliceblue;
+  font-family: "Source Code Pro", monospace;
+  font-size: 110px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+.cam1 img {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+}
+
+.cam2 img {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 230px;
+}
+.cam3 img {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  right: 0px;
+  width: 230px;
+}
+.cam4 img {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  left: 0px;
+  width: 230px;
+}
+
+.button {
+  border: 3px;
+  border-style: solid;
+  border-color: white;
+  text-decoration: none;
+  color: white;
+
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  width: 230px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25%;
+  margin-left: 43%;
+  transform-origin: center bottom;
+  cursor: pointer;
+
+  animation-name: button;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+li,
+a {
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 700;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+@keyframes button {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  28% {
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
