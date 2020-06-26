@@ -80,6 +80,7 @@ function checkkrankenkasse() {
   } else {
     text5.style.display = "none";
   }
+  getScore();
 }
 // Konzerne Entscheidung
 var modal3 = document.getElementById("myModal3");
@@ -110,6 +111,7 @@ function checkkonzerne() {
   } else {
     text7.style.display = "none";
   }
+  getScore();
 }
 // Reisedienstleister Entscheidung
 var modal4 = document.getElementById("myModal4");
@@ -140,6 +142,7 @@ function checkreise() {
   } else {
     text9.style.display = "none";
   }
+  getScore();
 }
 // Kameras Entscheidung
 var modal5 = document.getElementById("myModal5");
@@ -183,14 +186,40 @@ function checkkameras() {
   } else {
     text13.style.display = "none";
   }
+  getScore();
 }
 
 function getScore() {
   var score = 0;
 
   if (document.getElementById("gps").checked === true) {
+    score = score - 10;
+  }
+  if (document.getElementById("datenhinterlegung").checked === true) {
     score = score + 5;
   }
+  if (document.getElementById("jakrankenkasse").checked === true) {
+    score = score + 5;
+  }
+  if (document.getElementById("jakonzerne").checked === true) {
+    score = score + 5;
+  }
+
+  if (document.getElementById("jareise").checked === true) {
+    score = score + 5;
+  }
+  /* Kamera */
+
+  if (document.getElementById("jagesichtserkennung").checked === true) {
+    score = score + 5;
+  }
+  if (document.getElementById("jawaermebild").checked === true) {
+    score = score + 5;
+  }
+  if (document.getElementById("jakameras").checked === true) {
+    score = score + 5;
+  }
+
   localStorage.setItem("scoreAmount", score);
 }
 
