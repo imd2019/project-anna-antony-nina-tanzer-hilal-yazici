@@ -8,6 +8,7 @@ var answer5 = document.getElementById("antwort5");
 var answer6 = document.getElementById("antwort6");
 var answer7 = document.getElementById("antwort7");
 var answer8 = document.getElementById("antwort8");
+var week2 = document.getElementById("woche2");
 
 (function () {
   if (score <= -63) {
@@ -50,6 +51,7 @@ function checkantwort(button) {
   text1.style.display = "block";
   if (button === "antwort1") {
     text1.style.display = "block";
+    week2.style.display = "block";
     answer1.style.display = "none";
     answer2.style.display = "none";
   } else {
@@ -58,6 +60,7 @@ function checkantwort(button) {
   var text2 = document.getElementById("text2");
   if (button === "antwort2") {
     text2.style.display = "block";
+    week2.style.display = "block";
     answer1.style.display = "none";
     answer2.style.display = "none";
   } else {
@@ -66,6 +69,7 @@ function checkantwort(button) {
   var text3 = document.getElementById("text3");
   if (button === "antwort3") {
     text3.style.display = "block";
+    week2.style.display = "block";
     answer4.style.display = "none";
     answer3.style.display = "none";
   } else {
@@ -74,6 +78,7 @@ function checkantwort(button) {
   var text4 = document.getElementById("text4");
   if (button === "antwort4") {
     text4.style.display = "block";
+    week2.style.display = "block";
     answer3.style.display = "none";
     answer4.style.display = "none";
   } else {
@@ -82,6 +87,7 @@ function checkantwort(button) {
   var text5 = document.getElementById("text5");
   if (button === "antwort5") {
     text5.style.display = "block";
+    week2.style.display = "block";
     answer5.style.display = "none";
     answer6.style.display = "none";
   } else {
@@ -90,6 +96,7 @@ function checkantwort(button) {
   var text6 = document.getElementById("text6");
   if (button === "antwort6") {
     text6.style.display = "block";
+    week2.style.display = "block";
     answer5.style.display = "none";
     answer6.style.display = "none";
   } else {
@@ -98,6 +105,7 @@ function checkantwort(button) {
   var text7 = document.getElementById("text7");
   if (button === "antwort7") {
     text7.style.display = "block";
+    week2.style.display = "block";
     answer7.style.display = "none";
     answer8.style.display = "none";
   } else {
@@ -106,6 +114,7 @@ function checkantwort(button) {
   var text8 = document.getElementById("text8");
   if (button === "antwort8") {
     text8.style.display = "block";
+    week2.style.display = "block";
     answer7.style.display = "none";
     answer8.style.display = "none";
   } else {

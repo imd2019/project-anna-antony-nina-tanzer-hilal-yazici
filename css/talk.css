@@ -93,6 +93,7 @@ button {
   position: relative;
   top: 600px;
   left: 1000px;
+  display: none;
 }
 
 .speaker {
