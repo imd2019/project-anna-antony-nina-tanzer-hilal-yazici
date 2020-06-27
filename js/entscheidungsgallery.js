@@ -77,6 +77,7 @@ function checkkrankenkasse() {
   var text5 = document.getElementById("jakkstext");
   if (checkBox5.checked == true) {
     text5.style.display = "block";
+    localStorage.setItem("jakrankenkasse", "krankenkassepost");
   } else {
     text5.style.display = "none";
   }
@@ -108,6 +109,7 @@ function checkkonzerne() {
   var text7 = document.getElementById("jakonzernetext");
   if (checkBox7.checked == true) {
     text7.style.display = "block";
+    localStorage.setItem("jakonzerne", "konzernepost");
   } else {
     text7.style.display = "none";
   }
@@ -139,6 +141,7 @@ function checkreise() {
   var text9 = document.getElementById("jareisetext");
   if (checkBox9.checked == true) {
     text9.style.display = "block";
+    localStorage.setItem("jareise", "reisepost");
   } else {
     text9.style.display = "none";
   }
@@ -169,6 +172,7 @@ function checkkameras() {
   var text11 = document.getElementById("jagesichtserkennungtext");
   if (checkBox11.checked == true) {
     text11.style.display = "block";
+    localStorage.setItem("jagesichtserkennung", "gesichtserkennungpost");
   } else {
     text11.style.display = "none";
   }
@@ -176,13 +180,26 @@ function checkkameras() {
   var text12 = document.getElementById("jawaermebildtext");
   if (checkBox12.checked == true) {
     text12.style.display = "block";
+    localStorage.setItem("jawaermebild", "waermebildpost");
   } else {
     text12.style.display = "none";
+  }
+  var checkBox14 = document.getElementById("waermebildgesichtserkennung");
+  var text14 = document.getElementById("waermebildgesichtserkennungtext");
+  if (checkBox14.checked == true) {
+    text14.style.display = "block";
+    localStorage.setItem(
+      "waermebildgesichtserkennung",
+      "waermebildgesichtserkennungpost"
+    );
+  } else {
+    text14.style.display = "none";
   }
   var checkBox13 = document.getElementById("jakameras");
   var text13 = document.getElementById("jakamerastext");
   if (checkBox13.checked == true) {
     text13.style.display = "block";
+    localStorage.setItem("jakameras", "kamerapost");
   } else {
     text13.style.display = "none";
   }
@@ -196,28 +213,28 @@ function getScore() {
     score = score - 10;
   }
   if (document.getElementById("datenhinterlegung").checked === true) {
-    score = score + 5;
+    score = score - 5;
   }
   if (document.getElementById("jakrankenkasse").checked === true) {
-    score = score + 5;
+    score = score - 3;
   }
   if (document.getElementById("jakonzerne").checked === true) {
-    score = score + 5;
+    score = score - 10;
   }
 
   if (document.getElementById("jareise").checked === true) {
-    score = score + 5;
+    score = score - 7;
   }
   /* Kamera */
 
   if (document.getElementById("jagesichtserkennung").checked === true) {
-    score = score + 5;
+    score = score - 6;
   }
   if (document.getElementById("jawaermebild").checked === true) {
-    score = score + 5;
+    score = score - 8;
   }
   if (document.getElementById("jakameras").checked === true) {
-    score = score + 5;
+    score = score - 10;
   }
 
   localStorage.setItem("scoreAmount", score);

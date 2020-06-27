@@ -33,26 +33,23 @@ p {
 
 .posts {
   z-index: 9;
-}
-
-.gps {
-  border-style: solid;
-  border-width: 2px;
-  border-color: #fff;
-  z-index: 10;
   margin-left: 450px;
   margin-top: 210px;
-  width: 440px;
-  height: 75px;
 }
 
-.datenhinterlegung {
+.gps,
+.datenhinterlegung,
+.jakrankenkasse,
+.jakonzerne,
+.jareise,
+.gesichtserkennung,
+.waermebild,
+.jakameras,
+.waermebildgesichtserkennung {
   border-style: solid;
   border-width: 2px;
   border-color: #fff;
   z-index: 10;
-  margin-left: 450px;
-  margin-top: 5px;
   width: 440px;
   height: 75px;
 }
