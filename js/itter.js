@@ -22,7 +22,7 @@ if (konzernepost === "konzernepost") {
 } else {
   document.getElementById("konzernepost").style.display = "none";
 }
-var reisepost = localStorage.getItem("jakreise");
+var reisepost = localStorage.getItem("jareise");
 if (reisepost === "reisepost") {
   document.getElementById("reisepost").style.display = "block";
 } else {

@@ -9,18 +9,6 @@ body {
   background-color: black;
 }
 
-p {
-  word-break: normal;
-  color: white;
-  font-family: "Source Code Pro", monospace;
-  position: absolute;
-  font-size: 18px;
-  left: 970px;
-  top: 380px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 .mob1 {
   position: absolute;
   left: 120px;
@@ -56,7 +44,7 @@ p {
   left: 1100px;
   top: 320px;
 }
-p {
+.box {
   word-break: normal;
   color: white;
   font-family: "Source Code Pro", monospace;
@@ -69,6 +57,37 @@ p {
   border: 5px solid white;
   background-color: black;
   padding: 20px;
+}
+
+button {
+  border: 5px solid white;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.antworttexte p {
+  display: none;
+}
+
+#antwort1,
+#antwort3,
+#antwort5,
+#antwort7 {
+  top: 600px;
+  left: 400px;
+  position: absolute;
+}
+#antwort2,
+#antwort4,
+#antwort6,
+#antwort8 {
+  top: 600px;
+  left: 600px;
+  position: absolute;
 }
 .arrow {
   position: relative;
