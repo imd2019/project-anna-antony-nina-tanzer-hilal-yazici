@@ -277,11 +277,24 @@ body {
   font-family: "Source Code", "Courier New", Courier, monospace;
 }
 
+.checkboxes1 {
+  margin-top: -280px;
+  margin-left: -40px;
+}
+.checkboxes2 {
+  margin-top: -280px;
+  margin-left: -40px;
+}
+.checkboxes5 {
+  margin-top: -230px;
+  margin-left: -45px;
+}
+
 .container {
   display: block;
   position: relative;
   padding-left: 550px;
-  margin-bottom: -80px;
+  margin-top: 15px;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
