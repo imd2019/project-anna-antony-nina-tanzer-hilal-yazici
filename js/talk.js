@@ -121,3 +121,10 @@ function checkantwort(button) {
     text8.style.display = "none";
   }
 }
+function startNextWeek() {
+  localStorage.setItem(
+    "currentWeek",
+    parseInt(localStorage.getItem("currentWeek")) + 1
+  );
+  window.location = "office_week1.html";
+}

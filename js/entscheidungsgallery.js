@@ -1,3 +1,9 @@
+if (localStorage.getItem("currentWeek") === null) {
+  localStorage.setItem("currentWeek", "1");
+}
+
+var currentWeek = localStorage.getItem("currentWeek");
+
 // Standort Entscheidung
 var modal = document.getElementById("myModal");
 var img = document.getElementById("myImg");
@@ -11,34 +17,39 @@ span.onclick = function () {
   modal.style.display = "none";
 };
 
-function checktracking() {
-  var checkBox = document.getElementById("gps");
-  var text = document.getElementById("gpstext");
+var displayPaper = JSON.parse(localStorage.getItem("gps"));
+if (!!displayPaper && displayPaper.week <= currentWeek) {
+  document.getElementById("myImg").style.display = "none";
+}
 
-  if (checkBox.checked == true) {
+function saveDecision(checkBoxId, textBoxId, key, itterPost) {
+  var checkBox = document.getElementById(checkBoxId);
+  var text = document.getElementById(textBoxId);
+
+  if (checkBox.checked === true) {
     text.style.display = "block";
-    localStorage.setItem("gps", "gpspost");
+    if (!!key && !!itterPost) {
+      localStorage.setItem(
+        key,
+        JSON.stringify({ itterPost, week: currentWeek })
+      );
+    }
   } else {
     text.style.display = "none";
+    localStorage.removeItem(key);
   }
+}
 
-  var checkBox2 = document.getElementById("datenhinterlegung");
-  var text2 = document.getElementById("datenhinterlegungtext");
+function checktracking() {
+  saveDecision("gps", "gpstext", "gps", "gpspost");
+  saveDecision(
+    "datenhinterlegung",
+    "datenhinterlegungtext",
+    "datenhinterlegung",
+    "datenpost"
+  );
+  saveDecision("keins", "keintrackingtext");
 
-  if (checkBox2.checked == true) {
-    text2.style.display = "block";
-    localStorage.setItem("datenhinterlegung", "datenpost");
-  } else {
-    text2.style.display = "none";
-  }
-
-  var checkBox3 = document.getElementById("keins");
-  var text3 = document.getElementById("keintrackingtext");
-  if (checkBox3.checked == true) {
-    text3.style.display = "block";
-  } else {
-    text3.style.display = "none";
-  }
   getScore();
 }
 
@@ -64,25 +75,22 @@ span2.onclick = function () {
   modal2.style.display = "none";
 };
 
-function checkkrankenkasse() {
-  var checkBox4 = document.getElementById("neinkrankenkasse");
-  var text4 = document.getElementById("neinkkstext");
-  if (checkBox4.checked == true) {
-    text4.style.display = "block";
-  } else {
-    text4.style.display = "none";
-  }
+var displayPaper = JSON.parse(localStorage.getItem("jakrankenkasse"));
+if (!!displayPaper && displayPaper.week <= currentWeek) {
+  document.getElementById("myImg2").style.display = "none";
+}
 
-  var checkBox5 = document.getElementById("jakrankenkasse");
-  var text5 = document.getElementById("jakkstext");
-  if (checkBox5.checked == true) {
-    text5.style.display = "block";
-    localStorage.setItem("jakrankenkasse", "krankenkassepost");
-  } else {
-    text5.style.display = "none";
-  }
+function checkkrankenkasse() {
+  saveDecision("neinkrankenkasse", "neinkkstext");
+  saveDecision(
+    "jakrankenkasse",
+    "jakkstext",
+    "jakrankenkasse",
+    "krankenkassepost"
+  );
   getScore();
 }
+
 // Konzerne Entscheidung
 var modal3 = document.getElementById("myModal3");
 var img3 = document.getElementById("myImg3");
@@ -96,25 +104,17 @@ span3.onclick = function () {
   modal3.style.display = "none";
 };
 
-function checkkonzerne() {
-  var checkBox6 = document.getElementById("neinkonzerne");
-  var text6 = document.getElementById("neinkonzernetext");
-  if (checkBox6.checked == true) {
-    text6.style.display = "block";
-  } else {
-    text6.style.display = "none";
-  }
+var displayPaper = JSON.parse(localStorage.getItem("jakonzerne"));
+if (!!displayPaper && displayPaper.week <= currentWeek) {
+  document.getElementById("myImg3").style.display = "none";
+}
 
-  var checkBox7 = document.getElementById("jakonzerne");
-  var text7 = document.getElementById("jakonzernetext");
-  if (checkBox7.checked == true) {
-    text7.style.display = "block";
-    localStorage.setItem("jakonzerne", "konzernepost");
-  } else {
-    text7.style.display = "none";
-  }
+function checkkonzerne() {
+  saveDecision("neinkonzerne", "neinkonzernetext");
+  saveDecision("jakonzerne", "jakonzernetext", "jakonzerne", "konzernepost");
   getScore();
 }
+
 // Reisedienstleister Entscheidung
 var modal4 = document.getElementById("myModal4");
 var img4 = document.getElementById("myImg4");
@@ -128,25 +128,17 @@ span4.onclick = function () {
   modal4.style.display = "none";
 };
 
-function checkreise() {
-  var checkBox8 = document.getElementById("neinreise");
-  var text8 = document.getElementById("neinreisetext");
-  if (checkBox8.checked == true) {
-    text8.style.display = "block";
-  } else {
-    text8.style.display = "none";
-  }
+var displayPaper = JSON.parse(localStorage.getItem("jareise"));
+if (!!displayPaper && displayPaper.week <= currentWeek) {
+  document.getElementById("myImg4").style.display = "none";
+}
 
-  var checkBox9 = document.getElementById("jareise");
-  var text9 = document.getElementById("jareisetext");
-  if (checkBox9.checked == true) {
-    text9.style.display = "block";
-    localStorage.setItem("jareise", "reisepost");
-  } else {
-    text9.style.display = "none";
-  }
+function checkreise() {
+  saveDecision("neinreise", "neinreisetext");
+  saveDecision("jareise", "jareisetext", "jareise", "reisepost");
   getScore();
 }
+
 // Kameras Entscheidung
 var modal5 = document.getElementById("myModal5");
 var img5 = document.getElementById("myImg5");
@@ -160,49 +152,43 @@ span5.onclick = function () {
   modal5.style.display = "none";
 };
 
+var displayPaper = JSON.parse(localStorage.getItem("jakameras"));
+if (!!displayPaper && displayPaper.week <= currentWeek) {
+  document.getElementById("myImg5").style.display = "none";
+}
+
 function checkkameras() {
-  var checkBox10 = document.getElementById("neinkameras");
-  var text10 = document.getElementById("neinkamerastext");
-  if (checkBox10.checked == true) {
-    text10.style.display = "block";
-  } else {
-    text10.style.display = "none";
-  }
-  var checkBox11 = document.getElementById("jagesichtserkennung");
-  var text11 = document.getElementById("jagesichtserkennungtext");
-  if (checkBox11.checked == true) {
-    text11.style.display = "block";
-    localStorage.setItem("jagesichtserkennung", "gesichtserkennungpost");
-  } else {
-    text11.style.display = "none";
-  }
-  var checkBox12 = document.getElementById("jawaermebild");
-  var text12 = document.getElementById("jawaermebildtext");
-  if (checkBox12.checked == true) {
-    text12.style.display = "block";
-    localStorage.setItem("jawaermebild", "waermebildpost");
-  } else {
-    text12.style.display = "none";
-  }
-  var checkBox14 = document.getElementById("waermebildgesichtserkennung");
-  var text14 = document.getElementById("waermebildgesichtserkennungtext");
-  if (checkBox14.checked == true) {
-    text14.style.display = "block";
-    localStorage.setItem(
-      "waermebildgesichtserkennung",
-      "waermebildgesichtserkennungpost"
-    );
-  } else {
-    text14.style.display = "none";
-  }
-  var checkBox13 = document.getElementById("jakameras");
-  var text13 = document.getElementById("jakamerastext");
-  if (checkBox13.checked == true) {
-    text13.style.display = "block";
-    localStorage.setItem("jakameras", "kamerapost");
-  } else {
-    text13.style.display = "none";
-  }
+  saveDecision("neinkameras", "neinkamerastext");
+  saveDecision(
+    "jagesichtserkennung",
+    "jagesichtserkennungtext",
+    "jagesichtserkennung",
+    "gesichtserkennungpost"
+  );
+  saveDecision(
+    "jawaermebild",
+    "jawaermebildtext",
+    "jawaermebild",
+    "waermebildpost"
+  );
+  saveDecision(
+    "waermebildgesichtserkennung",
+    "waermebildgesichtserkennungtext",
+    "waermebildgesichtserkennung",
+    "waermebildgesichtserkennungpost"
+  );
+  saveDecision("jakameras", "jakamerastext", "jakameras", "kamerapost");
+  getScore();
+}
+
+function checkbureaucracy() {
+  saveDecision(
+    "yesbureaucracy",
+    "yesbureaucracytext",
+    "bureaucracy",
+    "bureaucracypost"
+  );
+  saveDecision("nobureaucracy", "nobureaucracytext");
   getScore();
 }
 
@@ -225,8 +211,8 @@ function getScore() {
   if (document.getElementById("jareise").checked === true) {
     score = score - 7;
   }
-  /* Kamera */
 
+  /* Kamera */
   if (document.getElementById("jagesichtserkennung").checked === true) {
     score = score - 6;
   }

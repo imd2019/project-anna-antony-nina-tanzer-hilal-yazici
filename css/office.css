@@ -7,7 +7,7 @@ body {
 }
 
 .bg {
-  background-image: url(../assets/bg_desk_empty.png);
+  background-image: url(../assets/bg_desk.png);
   height: 820px;
   width: 1440px;
   position: absolute;
@@ -104,13 +104,28 @@ body {
 
 .papier1 {
   z-index: 7;
-  margin-left: -260px;
+  margin-left: -220px;
   margin-top: 570px;
   height: 70px;
   width: 120px;
 }
 
-.papier1:hover {
+.papier1:hover,
+.papier2:hover,
+.papier3:hover,
+.papier4:hover,
+.papier5:hover,
+.papier6:hover,
+.papier7:hover,
+.papier8:hover,
+.papier9:hover,
+.papier10:hover,
+.papier11:hover,
+.papier12:hover,
+.papier13:hover,
+.papier14:hover,
+.papier15:hover,
+.papier16:hover {
   transform: scale(1.1);
 }
 
@@ -122,20 +137,12 @@ body {
   width: 110px;
 }
 
-.papier2:hover {
-  transform: scale(1.1);
-}
-
 .papier3 {
   z-index: 7;
   margin-left: 20px;
   margin-top: 550px;
   height: 80px;
   width: 70px;
-}
-
-.papier3:hover {
-  transform: scale(1.1);
 }
 
 .papier4 {
@@ -146,10 +153,6 @@ body {
   width: 90px;
 }
 
-.papier4:hover {
-  transform: scale(1.1);
-}
-
 .papier5 {
   z-index: 7;
   margin-left: -35px;
@@ -158,8 +161,83 @@ body {
   width: 100px;
 }
 
-.papier5:hover {
-  transform: scale(1.1);
+.papier6 {
+  z-index: 7;
+  margin-left: -1035px;
+  margin-top: 580px;
+  height: 80px;
+  width: 100px;
+}
+
+.papier7 {
+  z-index: 7;
+  margin-left: -25px;
+  margin-top: 600px;
+  height: 80px;
+  width: 100px;
+}
+.papier8 {
+  z-index: 7;
+  margin-left: -265px;
+  margin-top: 600px;
+  height: 80px;
+  width: 100px;
+}
+.papier9 {
+  z-index: 7;
+  margin-left: -170px;
+  margin-top: 600px;
+  height: 80px;
+  width: 100px;
+}
+.papier10 {
+  z-index: 7;
+  margin-left: -160px;
+  margin-top: 600px;
+  height: 80px;
+  width: 100px;
+}
+.papier11 {
+  z-index: 7;
+  margin-left: -40px;
+  margin-top: 490px;
+  height: 80px;
+  width: 100px;
+}
+.papier12 {
+  z-index: 7;
+  margin-left: -20px;
+  margin-top: 500px;
+  height: 80px;
+  width: 100px;
+}
+.papier13 {
+  z-index: 7;
+  margin-left: -10px;
+  margin-top: 510px;
+  height: 80px;
+  width: 100px;
+}
+.papier14 {
+  z-index: 7;
+  margin-left: -30px;
+  margin-top: 540px;
+  height: 80px;
+  width: 100px;
+}
+.papier15 {
+  z-index: 7;
+  margin-left: 600px;
+  margin-top: 610px;
+  height: 80px;
+  width: 100px;
+}
+.papier16 {
+  z-index: 7;
+  margin-left: 60px;
+  margin-top: 510px;
+  height: 80px;
+  width: 100px;
 }
 
 /* ################################# PAPIERE ENTSCHEIDUNGEN ########################################## */
@@ -168,7 +246,18 @@ body {
 #myImg2,
 #myImg3,
 #myImg4,
-#myImg5 {
+#myImg5,
+#myImg6,
+#myImg7,
+#myImg8,
+#myImg9,
+#myImg10,
+#myImg11,
+#myImg12,
+#myImg13,
+#myImg14,
+#myImg15,
+#myImg16 {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
@@ -178,7 +267,18 @@ body {
 #myImg2:hover,
 #myImg3:hover,
 #myImg4:hover,
-#myImg5:hover {
+#myImg5:hover,
+#myImg6:hover,
+#myImg7:hover,
+#myImg8:hover,
+#myImg9:hover,
+#myImg10:hover,
+#myImg11:hover,
+#myImg12:hover,
+#myImg13:hover,
+#myImg14:hover,
+#myImg15:hover,
+#myImg16:hover {
   opacity: 0.7;
 }
 
@@ -236,7 +336,18 @@ body {
 .close2,
 .close3,
 .close4,
-.close5 {
+.close5,
+.close6,
+.close7,
+.close8,
+.close9,
+.close10,
+.close11,
+.close12,
+.close13,
+.close14,
+.close15,
+.close16 {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -255,7 +366,18 @@ body {
 .close4:hover,
 .close4:focus,
 .close5:hover,
-.close5:focus {
+.close5:focus,
+.close6:focus,
+.close7:focus,
+.close8:focus,
+.close9:focus,
+.close10:focus,
+.close11:focus,
+.close12:focus,
+.close13:focus,
+.close14:focus,
+.close15:focus,
+.close16:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -278,16 +400,68 @@ body {
 }
 
 .checkboxes1 {
-  margin-top: -280px;
+  margin-top: -140px;
   margin-left: -40px;
 }
 .checkboxes2 {
   margin-top: -280px;
   margin-left: -40px;
 }
+.checkboxes3 {
+  margin-top: -190px;
+  margin-left: -45px;
+}
+.checkboxes4 {
+  margin-top: -200px;
+  margin-left: -45px;
+}
 .checkboxes5 {
   margin-top: -230px;
   margin-left: -45px;
+}
+.checkboxes6 {
+  margin-top: -350px;
+  margin-left: -40px;
+}
+.checkboxes7 {
+  margin-top: -270px;
+  margin-left: -40px;
+}
+.checkboxes8 {
+  margin-top: -270px;
+  margin-left: -40px;
+}
+.checkboxes9 {
+  margin-top: -140px;
+  margin-left: -40px;
+}
+.checkboxes10 {
+  margin-top: -270px;
+  margin-left: -40px;
+}
+.checkboxes11 {
+  margin-top: -270px;
+  margin-left: -40px;
+}
+.checkboxes12 {
+  margin-top: -270px;
+  margin-left: -40px;
+}
+.checkboxes13 {
+  margin-top: -350px;
+  margin-left: -40px;
+}
+.checkboxes14 {
+  margin-top: -160px;
+  margin-left: -40px;
+}
+.checkboxes15 {
+  margin-top: -160px;
+  margin-left: -40px;
+}
+.checkboxes16 {
+  margin-top: -160px;
+  margin-left: -40px;
 }
 
 .container {
