@@ -240,6 +240,105 @@ body {
   width: 100px;
 }
 
+.postits {
+  display: flex;
+  z-index: 6;
+}
+/*white*/
+.postit1 {
+  z-index: 7;
+  margin-left: -900px;
+  margin-top: 170px;
+  height: 50px;
+  width: 50px;
+}
+
+.postit4 {
+  z-index: 7;
+  margin-left: -100px;
+  margin-top: 250px;
+  height: 50px;
+  width: 50px;
+}
+
+.postit5 {
+  z-index: 7;
+  margin-left: -140px;
+  margin-top: 210px;
+  height: 50px;
+  width: 50px;
+}
+
+.postit6 {
+  z-index: 7;
+  margin-left: -150px;
+  margin-top: 220px;
+  height: 50px;
+  width: 50px;
+}
+.postit7 {
+  z-index: 7;
+  margin-left: -10px;
+  margin-top: 140px;
+  height: 50px;
+  width: 50px;
+}
+
+/*Green*/
+.postit2 {
+  z-index: 7;
+  margin-left: 200px;
+  margin-top: 270px;
+  height: 50px;
+  width: 50px;
+}
+/*Red*/
+.postit3 {
+  z-index: 7;
+  margin-left: -290px;
+  margin-top: 280px;
+  height: 50px;
+  width: 50px;
+}
+
+#PostIt1 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#PostIt2 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#PostIt3 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#PostIt4 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#PostIt5 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#PostIt6 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#PostIt7 {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 /* ################################# PAPIERE ENTSCHEIDUNGEN ########################################## */
 
 #myImg,
@@ -347,7 +446,14 @@ body {
 .close13,
 .close14,
 .close15,
-.close16 {
+.close16,
+.closepostit1,
+.closepostit2,
+.closepostit3,
+.closepostit4,
+.closepostit5,
+.closepostit6,
+.closepostit7 {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -377,7 +483,21 @@ body {
 .close13:focus,
 .close14:focus,
 .close15:focus,
-.close16:focus {
+.close16:focus,
+.closepostit1:hover,
+.closepostit1:focus,
+.closepostit2:hover,
+.closepostit2:focus,
+.closepostit3:hover,
+.closepostit3:focus,
+.closepostit4:hover,
+.closepostit4:focus,
+.closepostit5:hover,
+.closepostit5:focus,
+.closepostit6:hover,
+.closepostit6:focus,
+.closepostit7:hover,
+.closepostit7:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
