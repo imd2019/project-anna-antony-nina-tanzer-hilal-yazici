@@ -125,7 +125,7 @@ function checkantwort(button) {
 function startNextWeek() {
   localStorage.setItem("currentWeek", week + 1);
   if (week <= 3) {
-    window.location = "office_week1.html";
+    window.location = "office.html";
   }
   if (week === 4 && score < 0) {
     window.location = "end_good.html";
