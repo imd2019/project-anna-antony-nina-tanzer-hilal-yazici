@@ -1,4 +1,5 @@
 var score = localStorage.getItem("scoreAmount");
+var week = parseInt(localStorage.getItem("currentWeek"));
 
 var answer1 = document.getElementById("antwort1");
 var answer2 = document.getElementById("antwort2");
@@ -122,9 +123,14 @@ function checkantwort(button) {
   }
 }
 function startNextWeek() {
-  localStorage.setItem(
-    "currentWeek",
-    parseInt(localStorage.getItem("currentWeek")) + 1
-  );
-  window.location = "office_week1.html";
+  localStorage.setItem("currentWeek", week + 1);
+  if (week <= 3) {
+    window.location = "office_week1.html";
+  }
+  if (week === 4 && score < 0) {
+    window.location = "end_good.html";
+  }
+  if (week === 4 && score > 0) {
+    window.location = "bad-ending.html";
+  }
 }

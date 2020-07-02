@@ -1,0 +1,29 @@
+body {
+  background-image: url(../assets/Endscreen.png);
+
+  background-repeat: no-repeat;
+  background-color: black;
+  height: 820px;
+  width: 1440px;
+}
+
+p {
+  word-break: normal;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  position: absolute;
+  font-size: 14px;
+  left: 840px;
+  top: 340px;
+  overflow: hidden;
+}
+
+.box {
+  width: 400px;
+  left: 840px;
+  top: 340px;
+}
+
+.endText {
+  display: none;
+}

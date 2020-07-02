@@ -17,12 +17,54 @@ span.onclick = function () {
   modal.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("gps"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg").style.display = "none";
+/**
+ * Diese Funktion schaut, ob der currentWeek Wert einer gewählten Entscheidung kleiner ist,
+ * als der aktuelle Wert. Wenn das der Fall ist, soll das Papier hidden sein.
+ * @param {Array<string>} keys localStorage keys der zum Paper gehörigen Entscheidungen
+ * @param {string} elementId Die ID des Paper HTML Element
+ */
+function checkPaper(keys, elementId) {
+  var paperShouldBeHidden = false;
+  for (const key of keys) {
+    // lade localstorage item mit dem key string
+    var displayPaper = JSON.parse(localStorage.getItem(key));
+    // überprüfe ob die week des items kleiner current week ist
+    if (!!displayPaper && parseInt(displayPaper.week) <= currentWeek) {
+      paperShouldBeHidden = true;
+    }
+    // wenn ja setze die boolean variable true
+  }
+  if (paperShouldBeHidden === true)
+    // setze HTML item mit der Funktion übergebener elementId display none
+    document.getElementById(elementId).style.display = "none";
 }
 
-function saveDecision(checkBoxId, textBoxId, key, itterPost) {
+checkPaper(["gps", "datenhinterlegung", "keintracking"], "myImg");
+checkPaper(["jakrankenkasse"], "myImg2");
+checkPaper(["jakonzerne"], "myImg3");
+checkPaper(["jareise"], "myImg4");
+checkPaper(
+  [
+    "jakameras",
+    "jagesichtserkennung",
+    "jawaermebild",
+    "waermebildgesichtserkennung",
+  ],
+  "myImg5"
+);
+checkPaper(["yesrealestate"], "myImg6");
+checkPaper(["yesjobfield"], "myImg7");
+checkPaper(["yesdeposit"], "myImg8");
+checkPaper(["yescybertracking"], "myImg9");
+checkPaper(["yesvpn"], "myImg10");
+checkPaper(["yespets"], "myImg11");
+checkPaper(["yessecurity"], "myImg12");
+checkPaper(["yeseducation"], "myImg13");
+checkPaper(["yesloan"], "myImg14");
+checkPaper(["yesloan"], "myImg15");
+checkPaper(["yesbureaucracy"], "myImg16");
+
+function saveDecision(checkBoxId, textBoxId, key, itterPost = "test") {
   var checkBox = document.getElementById(checkBoxId);
   var text = document.getElementById(textBoxId);
 
@@ -48,7 +90,7 @@ function checktracking() {
     "datenhinterlegung",
     "datenpost"
   );
-  saveDecision("keins", "keintrackingtext");
+  saveDecision("keins", "keintrackingtext", "keintracking");
 
   getScore();
 }
@@ -75,11 +117,6 @@ span2.onclick = function () {
   modal2.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("jakrankenkasse"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg2").style.display = "none";
-}
-
 function checkkrankenkasse() {
   saveDecision("neinkrankenkasse", "neinkkstext");
   saveDecision(
@@ -104,11 +141,6 @@ span3.onclick = function () {
   modal3.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("jakonzerne"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg3").style.display = "none";
-}
-
 function checkkonzerne() {
   saveDecision("neinkonzerne", "neinkonzernetext");
   saveDecision("jakonzerne", "jakonzernetext", "jakonzerne", "konzernepost");
@@ -128,11 +160,6 @@ span4.onclick = function () {
   modal4.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("jareise"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg4").style.display = "none";
-}
-
 function checkreise() {
   saveDecision("neinreise", "neinreisetext");
   saveDecision("jareise", "jareisetext", "jareise", "reisepost");
@@ -151,11 +178,6 @@ var span5 = document.getElementsByClassName("close5")[0];
 span5.onclick = function () {
   modal5.style.display = "none";
 };
-
-var displayPaper = JSON.parse(localStorage.getItem("jakameras"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg5").style.display = "none";
-}
 
 function checkkameras() {
   saveDecision("neinkameras", "neinkamerastext");
@@ -194,11 +216,6 @@ span6.onclick = function () {
   modal6.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("yesrealestate"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg6").style.display = "none";
-}
-
 function checkrealestate() {
   saveDecision(
     "yesrealestate",
@@ -223,11 +240,6 @@ span7.onclick = function () {
   modal7.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("yesjobfield"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg7").style.display = "none";
-}
-
 function checkjobfield() {
   saveDecision("yesjobfield", "yesjobfieldtext", "jobfield", "jobfieldpost");
   saveDecision("nojobfield", "nojobfieldtext");
@@ -247,11 +259,6 @@ span8.onclick = function () {
   modal8.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("yesdeposit"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg8").style.display = "none";
-}
-
 function checkjobfield() {
   saveDecision("yesdeposit", "yesdeposittext", "deposit", "depositpost");
   saveDecision("nodeposit", "nodeposittext");
@@ -270,11 +277,6 @@ var span9 = document.getElementsByClassName("close9")[0];
 span9.onclick = function () {
   modal9.style.display = "none";
 };
-
-var displayPaper = JSON.parse(localStorage.getItem("yescybertracking"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg9").style.display = "none";
-}
 
 function checkcybertracking() {
   saveDecision(
@@ -306,11 +308,6 @@ span10.onclick = function () {
   modal10.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("yesvpn"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg10").style.display = "none";
-}
-
 function checkvpn() {
   saveDecision("yesvpn", "yesvpntext", "vpn", "vpnpost");
   saveDecision("novpn", "novpntext");
@@ -330,11 +327,6 @@ span11.onclick = function () {
   modal11.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("yespets"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg11").style.display = "none";
-}
-
 function checkpets() {
   saveDecision("yespets", "yespetstext", "pets", "petpost");
   saveDecision("nopets", "nopetstext");
@@ -353,11 +345,6 @@ var span12 = document.getElementsByClassName("close12")[0];
 span12.onclick = function () {
   modal12.style.display = "none";
 };
-
-var displayPaper = JSON.parse(localStorage.getItem("yessecurity"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg12").style.display = "none";
-}
 
 function checkpets() {
   saveDecision(
@@ -383,11 +370,6 @@ span13.onclick = function () {
   modal13.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("yeseducation"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg13").style.display = "none";
-}
-
 function checkeducation() {
   saveDecision(
     "yeseducation",
@@ -412,11 +394,6 @@ span14.onclick = function () {
   modal14.style.display = "none";
 };
 
-var displayPaper = JSON.parse(localStorage.getItem("yesloan"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg14").style.display = "none";
-}
-
 function checkloan() {
   saveDecision("yesloan", "yesloantext", "loans", "loanpost");
   saveDecision("noloan", "noloantext");
@@ -435,11 +412,6 @@ var span15 = document.getElementsByClassName("close15")[0];
 span15.onclick = function () {
   modal15.style.display = "none";
 };
-
-var displayPaper = JSON.parse(localStorage.getItem("yesloan"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg15").style.display = "none";
-}
 
 function checkloan() {
   saveDecision(
@@ -464,11 +436,6 @@ var span16 = document.getElementsByClassName("close16")[0];
 span16.onclick = function () {
   modal16.style.display = "none";
 };
-
-var displayPaper = JSON.parse(localStorage.getItem("yesbureaucracy"));
-if (!!displayPaper && displayPaper.week <= currentWeek) {
-  document.getElementById("myImg16").style.display = "none";
-}
 
 function checkbureaucracy() {
   saveDecision(
