@@ -4,6 +4,93 @@ if (localStorage.getItem("currentWeek") === null) {
 
 var currentWeek = localStorage.getItem("currentWeek");
 
+// Postit White
+var postitmodal1 = document.getElementById("PostIt1Modal");
+var imgP1 = document.getElementById("PostIt1");
+var modalImgP1 = document.getElementById("Post01");
+imgP1.onclick = function () {
+  postitmodal1.style.display = "block";
+  modalImgP1.src = "../assets/pinboard/pw1.png";
+};
+var spanP1 = document.getElementsByClassName("closepostit1")[0];
+spanP1.onclick = function () {
+  postitmodal1.style.display = "none";
+};
+//2
+var postitmodal4 = document.getElementById("PostIt4Modal");
+var imgP4 = document.getElementById("PostIt4");
+var modalImgP4 = document.getElementById("Post04");
+imgP4.onclick = function () {
+  postitmodal4.style.display = "block";
+  modalImgP4.src = "../assets/pinboard/pw4.png";
+};
+var spanP4 = document.getElementsByClassName("closepostit4")[0];
+spanP4.onclick = function () {
+  postitmodal4.style.display = "none";
+};
+//3
+var postitmodal5 = document.getElementById("PostIt5Modal");
+var imgP5 = document.getElementById("PostIt5");
+var modalImgP5 = document.getElementById("Post05");
+imgP5.onclick = function () {
+  postitmodal5.style.display = "block";
+  modalImgP5.src = "../assets/pinboard/pw5.png";
+};
+var spanP5 = document.getElementsByClassName("closepostit5")[0];
+spanP5.onclick = function () {
+  postitmodal5.style.display = "none";
+};
+//4
+var postitmodal6 = document.getElementById("PostIt6Modal");
+var imgP6 = document.getElementById("PostIt6");
+var modalImgP6 = document.getElementById("Post06");
+imgP6.onclick = function () {
+  postitmodal6.style.display = "block";
+  modalImgP6.src = "../assets/pinboard/pw6.png";
+};
+var spanP6 = document.getElementsByClassName("closepostit6")[0];
+spanP6.onclick = function () {
+  postitmodal6.style.display = "none";
+};
+//5
+var postitmodal7 = document.getElementById("PostIt7Modal");
+var imgP7 = document.getElementById("PostIt7");
+var modalImgP7 = document.getElementById("Post07");
+imgP7.onclick = function () {
+  postitmodal7.style.display = "block";
+  modalImgP7.src = "../assets/pinboard/pw7.png";
+};
+var spanP7 = document.getElementsByClassName("closepostit7")[0];
+spanP7.onclick = function () {
+  postitmodal7.style.display = "none";
+};
+// Postit 'Green
+var postitmodal2 = document.getElementById("PostIt2Modal");
+var imgP2 = document.getElementById("PostIt2");
+var modalImgP2 = document.getElementById("Post02");
+imgP2.onclick = function () {
+  postitmodal2.style.display = "block";
+  modalImgP2.src = "../assets/pinboard/pw2.png";
+};
+var spanP2 = document.getElementsByClassName("closepostit2")[0];
+spanP2.onclick = function () {
+  postitmodal2.style.display = "none";
+};
+
+// PostIt Red
+var postitmodal3 = document.getElementById("PostIt3Modal");
+var imgP3 = document.getElementById("PostIt3");
+var modalImgP3 = document.getElementById("Post03");
+imgP3.onclick = function () {
+  postitmodal3.style.display = "block";
+  modalImgP3.src = "../assets/pinboard/pw3.png";
+};
+var spanP3 = document.getElementsByClassName("closepostit3")[0];
+spanP3.onclick = function () {
+  postitmodal3.style.display = "none";
+};
+// Postit End
+
 // Standort Entscheidung
 var modal = document.getElementById("myModal");
 var img = document.getElementById("myImg");
