@@ -100,6 +100,7 @@ body {
 .papiere {
   display: flex;
   z-index: 6;
+  position: relative;
 }
 
 .papier1 {
@@ -131,26 +132,29 @@ body {
 
 .papier2 {
   z-index: 7;
-  margin-left: -100px;
+  margin-left: -170px;
   margin-top: 520px;
   height: 90px;
   width: 110px;
+  position: absolute;
 }
 
 .papier3 {
   z-index: 7;
-  margin-left: 20px;
+  margin-left: 30px;
   margin-top: 550px;
   height: 80px;
   width: 70px;
+  position: absolute;
 }
 
 .papier4 {
   z-index: 7;
   margin-left: -35px;
-  margin-top: 550px;
+  margin-top: 500px;
   height: 80px;
   width: 90px;
+  position: absolute;
 }
 
 .papier5 {
@@ -159,6 +163,7 @@ body {
   margin-top: 580px;
   height: 80px;
   width: 100px;
+  position: absolute;
 }
 
 .papier6 {
@@ -167,77 +172,88 @@ body {
   margin-top: 580px;
   height: 80px;
   width: 100px;
+  position: absolute;
 }
 
 .papier7 {
   z-index: 7;
-  margin-left: -25px;
+  margin-left: -850px;
   margin-top: 600px;
   height: 80px;
   width: 100px;
+  position: absolute;
 }
 .papier8 {
   z-index: 7;
-  margin-left: -265px;
-  margin-top: 600px;
-  height: 80px;
-  width: 100px;
-}
-.papier9 {
-  z-index: 7;
-  margin-left: -170px;
-  margin-top: 600px;
-  height: 80px;
-  width: 100px;
-}
-.papier10 {
-  z-index: 7;
-  margin-left: -160px;
-  margin-top: 600px;
-  height: 80px;
-  width: 100px;
-}
-.papier11 {
-  z-index: 7;
-  margin-left: -40px;
-  margin-top: 490px;
-  height: 80px;
-  width: 100px;
-}
-.papier12 {
-  z-index: 7;
-  margin-left: -20px;
+  margin-left: -900px;
   margin-top: 500px;
   height: 80px;
   width: 100px;
+  position: absolute;
+}
+.papier9 {
+  z-index: 7;
+  margin-left: -1120px;
+  margin-top: 600px;
+  height: 80px;
+  width: 100px;
+  position: absolute;
+}
+.papier10 {
+  z-index: 7;
+  margin-left: -1050px;
+  margin-top: 500px;
+  height: 80px;
+  width: 100px;
+  position: absolute;
+}
+.papier11 {
+  z-index: 7;
+  margin-left: -960px;
+  margin-top: 490px;
+  height: 80px;
+  width: 100px;
+  position: absolute;
+}
+.papier12 {
+  z-index: 7;
+  margin-left: -920px;
+  margin-top: 550px;
+  height: 80px;
+  width: 100px;
+  position: absolute;
 }
 .papier13 {
   z-index: 7;
-  margin-left: -10px;
+  margin-left: -100px;
   margin-top: 510px;
   height: 80px;
   width: 100px;
+  position: absolute;
 }
 .papier14 {
   z-index: 7;
-  margin-left: -30px;
+  margin-left: -1100px;
   margin-top: 540px;
-  height: 80px;
-  width: 100px;
+  height: 70px;
+  width: 120px;
+  position: absolute;
 }
 .papier15 {
   z-index: 7;
-  margin-left: 600px;
+  margin-left: -90px;
   margin-top: 610px;
   height: 80px;
   width: 100px;
+  position: absolute;
 }
 .papier16 {
   z-index: 7;
-  margin-left: 60px;
-  margin-top: 510px;
+  margin-left: -950px;
+  margin-top: 610px;
   height: 80px;
   width: 100px;
+  position: absolute;
 }
 
 .postits {
@@ -548,7 +564,7 @@ body {
   margin-left: -40px;
 }
 .checkboxes8 {
-  margin-top: -270px;
+  margin-top: -350px;
   margin-left: -40px;
 }
 .checkboxes9 {
@@ -560,7 +576,7 @@ body {
   margin-left: -40px;
 }
 .checkboxes11 {
-  margin-top: -270px;
+  margin-top: -390px;
   margin-left: -40px;
 }
 .checkboxes12 {
@@ -572,15 +588,15 @@ body {
   margin-left: -40px;
 }
 .checkboxes14 {
-  margin-top: -160px;
+  margin-top: -260px;
   margin-left: -40px;
 }
 .checkboxes15 {
-  margin-top: -160px;
+  margin-top: -310px;
   margin-left: -40px;
 }
 .checkboxes16 {
-  margin-top: -160px;
+  margin-top: -370px;
   margin-left: -40px;
 }
 
@@ -655,7 +671,7 @@ body {
   text-decoration: none;
   color: #b22222;
   z-index: 2;
-  margin-left: -660px;
+  margin-left: -580px;
   margin-top: 450px;
   position: absolute;
   display: none;

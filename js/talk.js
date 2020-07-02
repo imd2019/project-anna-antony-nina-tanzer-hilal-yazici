@@ -12,7 +12,7 @@ var answer8 = document.getElementById("antwort8");
 var week2 = document.getElementById("woche2");
 
 (function () {
-  if (score <= -63) {
+  if (score <= -73) {
     answer1.style.display = "block";
     answer2.style.display = "block";
   } else {
@@ -20,25 +20,23 @@ var week2 = document.getElementById("woche2");
     answer2.style.display = "none";
   }
 
-  if (score <= -1 && score >= -62) {
+  if (score <= -1 && score >= -72) {
     answer3.style.display = "block";
     answer4.style.display = "block";
   } else {
     answer3.style.display = "none";
     answer4.style.display = "none";
   }
-  var answer5 = document.getElementById("antwort5");
-  var answer6 = document.getElementById("antwort6");
-  if (score <= 12 && score >= 0) {
+
+  if (score <= 22 && score >= 0) {
     answer5.style.display = "block";
     answer6.style.display = "block";
   } else {
     answer5.style.display = "none";
     answer6.style.display = "none";
   }
-  var answer7 = document.getElementById("antwort7");
-  var answer8 = document.getElementById("antwort8");
-  if (score >= 13) {
+
+  if (score >= 23) {
     answer7.style.display = "block";
     answer8.style.display = "block";
   } else {
@@ -49,12 +47,13 @@ var week2 = document.getElementById("woche2");
 
 function checkantwort(button) {
   var text1 = document.getElementById("text1");
-  text1.style.display = "block";
+
   if (button === "antwort1") {
     text1.style.display = "block";
     week2.style.display = "block";
     answer1.style.display = "none";
     answer2.style.display = "none";
+    score = score + 5;
   } else {
     text1.style.display = "none";
   }
@@ -64,6 +63,7 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer1.style.display = "none";
     answer2.style.display = "none";
+    score = score - 5;
   } else {
     text2.style.display = "none";
   }
@@ -73,6 +73,7 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer4.style.display = "none";
     answer3.style.display = "none";
+    score = score + 5;
   } else {
     text3.style.display = "none";
   }
@@ -82,6 +83,7 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer3.style.display = "none";
     answer4.style.display = "none";
+    score = score - 5;
   } else {
     text4.style.display = "none";
   }
@@ -91,6 +93,7 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer5.style.display = "none";
     answer6.style.display = "none";
+    score = score + 5;
   } else {
     text5.style.display = "none";
   }
@@ -100,6 +103,7 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer5.style.display = "none";
     answer6.style.display = "none";
+    score = score - 5;
   } else {
     text6.style.display = "none";
   }
@@ -109,6 +113,7 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer7.style.display = "none";
     answer8.style.display = "none";
+    score = score + 5;
   } else {
     text7.style.display = "none";
   }
@@ -118,6 +123,7 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer7.style.display = "none";
     answer8.style.display = "none";
+    score = score - 5;
   } else {
     text8.style.display = "none";
   }

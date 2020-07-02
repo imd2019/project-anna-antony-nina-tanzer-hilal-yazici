@@ -5,6 +5,7 @@ if (localStorage.getItem("currentWeek") === null) {
 var currentWeek = localStorage.getItem("currentWeek");
 
 // Postit White
+
 var postitmodal1 = document.getElementById("PostIt1Modal");
 var imgP1 = document.getElementById("PostIt1");
 var modalImgP1 = document.getElementById("Post01");
@@ -16,6 +17,7 @@ var spanP1 = document.getElementsByClassName("closepostit1")[0];
 spanP1.onclick = function () {
   postitmodal1.style.display = "none";
 };
+
 //2
 var postitmodal4 = document.getElementById("PostIt4Modal");
 var imgP4 = document.getElementById("PostIt4");
@@ -566,95 +568,94 @@ function getScore() {
     score = score - 10;
   }
 
+  if (document.getElementById("yesrealestate").checked === true) {
+    score = score - 2;
+  }
+  if (document.getElementById("yesjobfield").checked === true) {
+    score = score + 3;
+  }
+  if (document.getElementById("yesdeposit").checked === true) {
+    score = score + 6;
+  }
+  if (document.getElementById("yescybertracking").checked === true) {
+    score = score - 9;
+  }
+  if (document.getElementById("cybertrackingandscore").checked === true) {
+    score = score - 10;
+  }
+  if (document.getElementById("yesvpn").checked === true) {
+    score = score - 7;
+  }
+  if (document.getElementById("yespets").checked === true) {
+    score = score - 3;
+  }
+  if (document.getElementById("yessecurity").checked === true) {
+    score = score - 7;
+  }
+  if (document.getElementById("yeseducation").checked === true) {
+    score = score - 4;
+  }
+  if (document.getElementById("yesloan").checked === true) {
+    score = score - 5;
+  }
+  if (document.getElementById("yesblacklist").checked === true) {
+    score = score - 4;
+  }
+  if (document.getElementById("yesbureaucracy").checked === true) {
+    score = score - 3;
+  }
+  if (document.getElementById("jareise").checked === true) {
+    score = score - 7;
+  }
+  if (document.getElementById("keins").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("neinkrankenkasse").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("neinkonzerne").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("neinreise").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("neinkameras").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("norealestate").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("nojobfield").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("nodeposit").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("nocybertracking").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("novpn").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("nopets").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("nosecurity").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("noeducation").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("noloan").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("noblacklist").checked === true) {
+    score = score + 1;
+  }
+  if (document.getElementById("nobureaucracy").checked === true) {
+    score = score + 1;
+  }
   localStorage.setItem("scoreAmount", score);
-}
-
-if (document.getElementById("yesrealestate").checked === true) {
-  score = score - 2;
-}
-if (document.getElementById("yesjobfield").checked === true) {
-  score = score + 3;
-}
-if (document.getElementById("yesdeposit").checked === true) {
-  score = score + 6;
-}
-if (document.getElementById("yescybertracking").checked === true) {
-  score = score - 9;
-}
-if (document.getElementById("cybertrackingandscore").checked === true) {
-  score = score - 10;
-}
-if (document.getElementById("yesvpn").checked === true) {
-  score = score - 7;
-}
-if (document.getElementById("yespets").checked === true) {
-  score = score - 3;
-}
-if (document.getElementById("yessecurity").checked === true) {
-  score = score - 7;
-}
-if (document.getElementById("yeseducation").checked === true) {
-  score = score - 4;
-}
-if (document.getElementById("yesloan").checked === true) {
-  score = score - 5;
-}
-if (document.getElementById("yesblacklist").checked === true) {
-  score = score - 4;
-}
-if (document.getElementById("yesbureaucracy").checked === true) {
-  score = score - 3;
-}
-if (document.getElementById("jareise").checked === true) {
-  score = score - 7;
-}
-if (document.getElementById("keins").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("neinkrankenkasse").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("neinkonzerne").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("neinreise").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("neinkameras").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("norealestate").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("nojobfield").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("nodeposit").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("nocybertracking").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("novpn").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("nopets").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("nosecurity").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("noeducation").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("noloan").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("noblacklist").checked === true) {
-  score = score + 1;
-}
-if (document.getElementById("nobureaucracy").checked === true) {
-  score = score + 1;
 }
 
 function checkboxes() {

@@ -27,8 +27,8 @@ p {
 
 .weiterpfeil {
   height: 80px;
-  margin-left: 250px;
-  margin-top: 700px;
+  margin-left: 750px;
+  margin-top: 680px;
 }
 
 .posts {
@@ -55,7 +55,9 @@ p {
 .education,
 .loans,
 .blacklist,
-.bureaucracy {
+.bureaucracy,
+.cybertracking,
+.cybertrackingandscore {
   border-style: solid;
   border-width: 2px;
   border-color: #fff;
