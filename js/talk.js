@@ -127,6 +127,7 @@ function checkantwort(button) {
   } else {
     text8.style.display = "none";
   }
+  localStorage.setItem("scoreAmount", score);
 }
 function startNextWeek() {
   localStorage.setItem("currentWeek", week + 1);
