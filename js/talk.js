@@ -1,5 +1,4 @@
 var score = localStorage.getItem("scoreAmount");
-var week = parseInt(localStorage.getItem("currentWeek"));
 
 var answer1 = document.getElementById("antwort1");
 var answer2 = document.getElementById("antwort2");
@@ -12,7 +11,7 @@ var answer8 = document.getElementById("antwort8");
 var week2 = document.getElementById("woche2");
 
 (function () {
-  if (score <= -73) {
+  if (score <= -63) {
     answer1.style.display = "block";
     answer2.style.display = "block";
   } else {
@@ -20,23 +19,25 @@ var week2 = document.getElementById("woche2");
     answer2.style.display = "none";
   }
 
-  if (score <= -1 && score >= -72) {
+  if (score <= -1 && score >= -62) {
     answer3.style.display = "block";
     answer4.style.display = "block";
   } else {
     answer3.style.display = "none";
     answer4.style.display = "none";
   }
-
-  if (score <= 22 && score >= 0) {
+  var answer5 = document.getElementById("antwort5");
+  var answer6 = document.getElementById("antwort6");
+  if (score <= 12 && score >= 0) {
     answer5.style.display = "block";
     answer6.style.display = "block";
   } else {
     answer5.style.display = "none";
     answer6.style.display = "none";
   }
-
-  if (score >= 23) {
+  var answer7 = document.getElementById("antwort7");
+  var answer8 = document.getElementById("antwort8");
+  if (score >= 13) {
     answer7.style.display = "block";
     answer8.style.display = "block";
   } else {
@@ -47,13 +48,12 @@ var week2 = document.getElementById("woche2");
 
 function checkantwort(button) {
   var text1 = document.getElementById("text1");
-
+  text1.style.display = "block";
   if (button === "antwort1") {
     text1.style.display = "block";
     week2.style.display = "block";
     answer1.style.display = "none";
     answer2.style.display = "none";
-    score = score + 5;
   } else {
     text1.style.display = "none";
   }
@@ -63,7 +63,6 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer1.style.display = "none";
     answer2.style.display = "none";
-    score = score - 5;
   } else {
     text2.style.display = "none";
   }
@@ -73,7 +72,6 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer4.style.display = "none";
     answer3.style.display = "none";
-    score = score + 5;
   } else {
     text3.style.display = "none";
   }
@@ -83,7 +81,6 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer3.style.display = "none";
     answer4.style.display = "none";
-    score = score - 5;
   } else {
     text4.style.display = "none";
   }
@@ -93,7 +90,6 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer5.style.display = "none";
     answer6.style.display = "none";
-    score = score + 5;
   } else {
     text5.style.display = "none";
   }
@@ -103,7 +99,6 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer5.style.display = "none";
     answer6.style.display = "none";
-    score = score - 5;
   } else {
     text6.style.display = "none";
   }
@@ -113,7 +108,6 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer7.style.display = "none";
     answer8.style.display = "none";
-    score = score + 5;
   } else {
     text7.style.display = "none";
   }
@@ -123,21 +117,15 @@ function checkantwort(button) {
     week2.style.display = "block";
     answer7.style.display = "none";
     answer8.style.display = "none";
-    score = score - 5;
   } else {
     text8.style.display = "none";
   }
   localStorage.setItem("scoreAmount", score);
 }
 function startNextWeek() {
-  localStorage.setItem("currentWeek", week + 1);
-  if (week <= 3) {
-    window.location = "office.html";
-  }
-  if (week === 4 && score < 0) {
-    window.location = "end_good.html";
-  }
-  if (week === 4 && score > 0) {
-    window.location = "bad-ending.html";
-  }
+  localStorage.setItem(
+    "currentWeek",
+    parseInt(localStorage.getItem("currentWeek")) + 1
+  );
+  window.location = "office_week1.html";
 }
