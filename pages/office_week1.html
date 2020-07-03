@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safety First</title>
+    <link href="../css/office.css" rel="stylesheet" type="text/css" />
+    <script type="module" src="../js/addons/p5.js"></script>
+    <script type="module" src="../js/addons/p5.sound.js"></script>
+  </head>
+
+  <body onclick="checkboxes()">
+    <div class="bg"></div>
+    <div class="pctext">
+      <ul class="pclist">
+        <li id="gpstext">GPS-Tracking ✓</li>
+        <li id="datenhinterlegungtext">Datenhinterlegung ✓</li>
+        <li id="keintrackingtext">Kein Tracking ✖</li>
+        <li id="neinkkstext">Krankenkasse ✖</li>
+        <li id="jakkstext">Krankenkasse ✓</li>
+        <li id="neinkonzernetext">Konzerne ✖</li>
+        <li id="jakonzernetext">Konzerne ✓</li>
+        <li id="neinreisetext">Reisedienstleister ✖</li>
+        <li id="jareisetext">Reisedienstleister ✓</li>
+        <li id="neinkamerastext">Kameras installieren ✖</li>
+        <li id="jakamerastext">Kameras installieren ✓</li>
+        <li id="jagesichtserkennungtext">Gesichtserkennung ✓</li>
+        <li id="jawaermebildtext">Wärmebildfunktion ✓</li>
+        <li id="waermebildgesichtserkennungtext">
+          Wärmebildfunktion, Gesichtserkennung ✓
+        </li>
+        <li id="yesrealestatetext">Immobilienberater ✓</li>
+        <li id="norealestatetext">Immobilienberater ✖</li>
+        <li id="yesjobfieldtext">Berufsgruppen strikter ✓</li>
+        <li id="nojobfieldtext">Berufsgruppen strikter ✖</li>
+        <li id="yesdeposittext">Kaution ✓</li>
+        <li id="nodeposittext">Kaution ✖</li>
+        <li id="yescybertrackingtext">Online Tracking ✓</li>
+        <li id="nocybertrackingtext">Online Tracking ✖</li>
+        <li id="cybertrackingandscoretext">Online Tracking mit Score ✓</li>
+        <li id="yesvpntext">VPN verboten ✓</li>
+        <li id="novpntext">VPN verboten ✖</li>
+        <li id="yespetstext">Haustiere ✓</li>
+        <li id="nopetstext">Haustiere ✖</li>
+        <li id="yessecuritytext">Sicherheitsdienste ✓</li>
+        <li id="nosecuritytext">Sicherheitsdienste ✖</li>
+        <li id="yeseducationtext">Score Bildung ✓</li>
+        <li id="noeducationtext">Score Bildung ✖</li>
+        <li id="yesloantext">Score Kredite ✓</li>
+        <li id="noloantext">Score Kredite ✖</li>
+        <li id="yesblacklisttext">Schwarze Liste ✓</li>
+        <li id="nolblacklisttext">schwarze Liste ✖</li>
+        <li id="yesbureaucracytext">Bürokratie Vorteile ✓</li>
+        <li id="nobureaucracytext">Bürokratie Vorteile ✖</li>
+      </ul>
+    </div>
+    <div class="ordner">
+      <img src="../assets/ordner_1.png" class="ordner1" />
+      <img src="../assets/ordner_1.png" class="ordner2" />
+      <img src="../assets/ordner_1.png" class="ordner3" />
+      <img src="../assets/ordner_1.png" class="ordner4" />
+      <img
+        src="../assets/ordner_1.png"
+        onclick="rotation()"
+        class="ordner5"
+        id="rotatedimage"
+      />
+    </div>
+
+    <!----------------------------PostIts-------------------------------------->
+    <!----- White---->
+    <div class="postits">
+      <img src="../assets/postitweiss.png" class="postit1" id="PostIt1" />
+      <div id="PostIt1Modal" class="modal">
+        <span class="closepostit1">&times;</span>
+        <img class="modal-content" id="Post01" />
+      </div>
+
+      <img src="../assets/postitweiss.png" class="postit4" id="PostIt4" />
+      <div id="PostIt4Modal" class="modal">
+        <span class="closepostit4">&times;</span>
+        <img class="modal-content" id="Post04" />
+      </div>
+
+      <img src="../assets/postitweiss.png" class="postit5" id="PostIt5" />
+      <div id="PostIt5Modal" class="modal">
+        <span class="closepostit5">&times;</span>
+        <img class="modal-content" id="Post05" />
+      </div>
+
+      <img src="../assets/postitweiss.png" class="postit6" id="PostIt6" />
+      <div id="PostIt6Modal" class="modal">
+        <span class="closepostit6">&times;</span>
+        <img class="modal-content" id="Post06" />
+      </div>
+
+      <img src="../assets/postitweiss.png" class="postit7" id="PostIt7" />
+      <div id="PostIt7Modal" class="modal">
+        <span class="closepostit7">&times;</span>
+        <img class="modal-content" id="Post07" />
+      </div>
+
+      <!-----Green---->
+      <img src="../assets/postitgruen.png" class="postit2" id="PostIt2" />
+      <div id="PostIt2Modal" class="modal">
+        <span class="closepostit2">&times;</span>
+        <img class="modal-content" id="Post02" />
+      </div>
+      <!----- Red--->
+      <img src="../assets/postitrot.png" class="postit3" id="PostIt3" />
+      <div id="PostIt3Modal" class="modal">
+        <span class="closepostit3">&times;</span>
+        <img class="modal-content" id="Post03" />
+      </div>
+    </div>
+    <div class="papiere">
+      <!--------------------Tracking Entscheidung-------------------------->
+      <img src="../assets/paper1.png" class="papier1" id="myImg" />
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01" />
+
+        <div class="checkboxes1">
+          <label class="container"
+            >Keins von beiden
+            <input type="checkbox" id="keins" onclick="checktracking()" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Datenhinterlegung am Zielort
+            <input
+              type="checkbox"
+              id="datenhinterlegung"
+              onclick="checktracking()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >GPS Tracking
+            <input type="checkbox" id="gps" onclick="checktracking()" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!---Modal Image von https://www.w3schools.com/howto/howto_css_modal_images.asp--->
+
+      <!--------------------Krankenkasse Entscheidung-------------------------->
+      <img src="../assets/paper2.png" class="papier2" id="myImg2" />
+      <div id="myModal2" class="modal">
+        <span class="close2">&times;</span>
+        <img class="modal-content" id="img02" />
+
+        <div class="checkboxes2">
+          <label class="container"
+            >Ja
+            <input
+              type="checkbox"
+              id="jakrankenkasse"
+              onclick="checkkrankenkasse()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input
+              type="checkbox"
+              id="neinkrankenkasse"
+              onclick="checkkrankenkasse()"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Konzerne Entscheidung-------------------------->
+      <img src="../assets/paper3.png" class="papier3" id="myImg3" />
+      <div id="myModal3" class="modal">
+        <span class="close3">&times;</span>
+        <img class="modal-content" id="img03" />
+
+        <div class="checkboxes3">
+          <label class="container"
+            >Nein
+            <input
+              type="checkbox"
+              id="neinkonzerne"
+              onclick="checkkonzerne()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Ja
+            <input type="checkbox" id="jakonzerne" onclick="checkkonzerne()" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Reisedienstleister Entscheidung-------------------------->
+      <img src="../assets/paper4.png" class="papier4" id="myImg4" />
+      <div id="myModal4" class="modal">
+        <span class="close4">&times;</span>
+        <img class="modal-content" id="img04" />
+
+        <div class="checkboxes4">
+          <label class="container"
+            >Nein
+            <input type="checkbox" id="neinreise" onclick="checkreise()" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Ja
+            <input type="checkbox" id="jareise" onclick="checkreise()" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Kameras Entscheidung-------------------------->
+      <img src="../assets/paper5.png" class="papier5" id="myImg5" />
+      <div id="myModal5" class="modal">
+        <span class="close5">&times;</span>
+        <img class="modal-content" id="img05" />
+
+        <div class="checkboxes5">
+          <label class="container"
+            >Ja
+            <input type="checkbox" id="jakameras" onclick="checkkameras()" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Gesichtserkennung installieren
+            <input
+              type="checkbox"
+              id="jagesichtserkennung"
+              onclick="checkkameras()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Wärmebildfunktion installieren
+            <input type="checkbox" id="jawaermebild" onclick="checkkameras()" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Beide Zusatzoptionen
+            <input
+              type="checkbox"
+              id="waermebildgesichtserkennung"
+              onclick="checkkameras()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input type="checkbox" id="neinkameras" onclick="checkkameras()" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung Immobilienberater-------------------------->
+      <img src="../assets/paper4.png" class="papier6" id="myImg6" />
+      <div id="myModal6" class="modal">
+        <span class="close6">&times;</span>
+        <img class="modal-content" id="img06" />
+
+        <div class="checkboxes6">
+          <label class="container"
+            >Ja
+            <input
+              type="checkbox"
+              id="yesrealestate"
+              onclick="checkrealestate()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input
+              type="checkbox"
+              id="norealestate"
+              onclick="checkrealestate()"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung Berufsgruppen-------------------------->
+      <img src="../assets/paper1.png" class="papier7" id="myImg7" />
+      <div id="myModal7" class="modal">
+        <span class="close7">&times;</span>
+        <img class="modal-content" id="img07" />
+
+        <div class="checkboxes7">
+          <label class="container"
+            >Ja
+            <input type="checkbox" id="yesjobfield" onclick="checkjobfield()" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input type="checkbox" id="nojobfield" onclick="checkjobfield()" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung Kaution-------------------------->
+      <img src="../assets/paper2.png" class="papier8" id="myImg8" />
+      <div id="myModal8" class="modal">
+        <span class="close8">&times;</span>
+        <img class="modal-content" id="img08" />
+
+        <div class="checkboxes8">
+          <label class="container"
+            >Ja
+            <input type="checkbox" id="yesdeposit" onclick="checkdeposit()" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input type="checkbox" id="nodeposit" onclick="checkdeposit()" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung Cybertracking-------------------------->
+      <img src="../assets/paper5.png" class="papier9" id="myImg9" />
+      <div id="myModal9" class="modal">
+        <span class="close9">&times;</span>
+        <img class="modal-content" id="img09" />
+
+        <div class="checkboxes9">
+          <label class="container"
+            >Ja
+            <input
+              type="checkbox"
+              id="yescybertracking"
+              onclick="checkcybertracking()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Ja und Nutzungsdauer an Score anpassen
+            <input
+              type="checkbox"
+              id="cybertrackingandscore"
+              onclick="checkcybertracking()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input
+              type="checkbox"
+              id="nocybertracking"
+              onclick="checkcybertracking()"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung VPN-------------------------->
+      <img src="../assets/paper4.png" class="papier10" id="myImg10" />
+      <div id="myModal10" class="modal">
+        <span class="close10">&times;</span>
+        <img class="modal-content" id="img10" />
+
+        <div class="checkboxes10">
+          <label class="container"
+            >Ja
+            <input type="checkbox" id="yesvpn" onclick="checkvpn()" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input type="checkbox" id="novpn" onclick="checkvpn()" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung Haustiere-------------------------->
+      <img src="../assets/paper2.png" class="papier11" id="myImg11" />
+      <div id="myModal11" class="modal">
+        <span class="close11">&times;</span>
+        <img class="modal-content" id="img11" />
+
+        <div class="checkboxes11">
+          <label class="container"
+            >Ja
+            <input type="checkbox" id="yespets" onclick="checkpets()" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input type="checkbox" id="nopets" onclick="checkpets()" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung Sicherheitsdienste und Polizei-------------------------->
+      <img src="../assets/paper4.png" class="papier12" id="myImg12" />
+      <div id="myModal12" class="modal">
+        <span class="close12">&times;</span>
+        <img class="modal-content" id="img12" />
+
+        <div class="checkboxes12">
+          <label class="container"
+            >Ja
+            <input type="checkbox" id="yessecurity" onclick="checksecurity()" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input type="checkbox" id="nosecurity" onclick="checksecurity()" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung Bildung-------------------------->
+      <img src="../assets/paper1.png" class="papier13" id="myImg13" />
+      <div id="myModal13" class="modal">
+        <span class="close13">&times;</span>
+        <img class="modal-content" id="img13" />
+
+        <div class="checkboxes13">
+          <label class="container"
+            >Ja
+            <input
+              type="checkbox"
+              id="yeseducation"
+              onclick="checkeducation()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input
+              type="checkbox"
+              id="noeducation"
+              onclick="checkeducation()"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung Kredite-------------------------->
+      <img src="../assets/paper1.png" class="papier14" id="myImg14" />
+      <div id="myModal14" class="modal">
+        <span class="close14">&times;</span>
+        <img class="modal-content" id="img14" />
+
+        <div class="checkboxes14">
+          <label class="container"
+            >Ja
+            <input type="checkbox" id="yesloan" onclick="checkloan()" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input type="checkbox" id="noloan" onclick="checkloan()" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung schwarze Liste-------------------------->
+      <img src="../assets/paper2.png" class="papier15" id="myImg15" />
+      <div id="myModal15" class="modal">
+        <span class="close15">&times;</span>
+        <img class="modal-content" id="img15" />
+
+        <div class="checkboxes15">
+          <label class="container"
+            >Ja
+            <input
+              type="checkbox"
+              id="yesblacklist"
+              onclick="checkblacklist()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input
+              type="checkbox"
+              id="noblacklist"
+              onclick="checkblacklist()"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <!--------------------Entscheidung Bürokratie-------------------------->
+      <img src="../assets/paper5.png" class="papier16" id="myImg16" />
+      <div id="myModal16" class="modal">
+        <span class="close16">&times;</span>
+        <img class="modal-content" id="img16" />
+
+        <div class="checkboxes16">
+          <label class="container"
+            >Ja
+            <input
+              type="checkbox"
+              id="yesbureaucracy"
+              onclick="checkbureaucracy()"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Nein
+            <input
+              type="checkbox"
+              id="nobureaucracy"
+              onclick="checkbureaucracy()"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="bestaetigen">
+      <a href="itter.html" id="weiter">Auswahl bestätigen</a>
+    </div>
+    <script>
+      function rotation() {
+        var img = document.getElementById("rotatedimage");
+        img.setAttribute("class", "rotated-image");
+      }
+    </script>
+    <script src="../js/entscheidungsgallery.js "></script>
+  </body>
+</html>
