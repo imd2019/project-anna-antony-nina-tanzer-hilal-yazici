@@ -1,7 +1,7 @@
 /**
- *
- * @param {*} key
- * @param {*} elementId
+ * Zeige die End-Sätze der in den 4 Wochen gewählten Entscheidungen.
+ * @param {*} key localStorage key der gewählten Entscheidung
+ * @param {*} elementId ID des jeweiligen Textes
  */
 function checkEnd(key, elementId) {
   var displayEnd = JSON.parse(localStorage.getItem(key));
