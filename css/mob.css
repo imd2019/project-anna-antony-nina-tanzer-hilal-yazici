@@ -4,14 +4,21 @@
 }
 
 body {
-  background-color: black;
-  height: 820px;
-  width: 1440px;
-  position: absolute;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  z-index: 1;
+  background-color: black;
+}
+
+p {
+  word-break: normal;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  position: absolute;
+  font-size: 18px;
+  left: 970px;
+  top: 380px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .mob1 {
@@ -26,50 +33,45 @@ body {
 }
 .mob3 {
   position: absolute;
-  left: 290px;
+  left: 190px;
   top: 70px;
 }
 .mob4 {
   position: absolute;
-  left: 520px;
+  left: 420px;
   top: 170px;
 }
 .mob5 {
   position: absolute;
-  left: 720px;
+  left: 620px;
   top: 130px;
 }
 .mob6 {
   position: absolute;
-  left: 1100px;
+  left: 900px;
   top: 100px;
 }
 .mob7 {
   position: absolute;
-  left: 1180px;
+  left: 980px;
   top: 320px;
 }
-
-.box {
+p {
   word-break: normal;
   color: white;
   font-family: "Source Code Pro", monospace;
   position: absolute;
-  font-size: 18px;
-  left: 370px;
+  font-size: 13px;
+  left: 320px;
   top: 480px;
+  white-space: nowrap;
   overflow: hidden;
   border: 5px solid white;
   background-color: black;
   padding: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-right: 120px;
-  width: 550px;
-  height: 220px;
 }
 .arrow {
   position: relative;
   top: 600px;
-  left: 1100px;
+  left: 1000px;
 }

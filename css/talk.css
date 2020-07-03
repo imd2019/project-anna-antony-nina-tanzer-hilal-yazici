@@ -4,13 +4,8 @@
 }
 
 body {
-  height: 820px;
-  width: 1440px;
-  position: absolute;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  z-index: 1;
   background-color: black;
 }
 
@@ -26,27 +21,27 @@ body {
 }
 .mob3 {
   position: absolute;
-  left: 290px;
+  left: 190px;
   top: 70px;
 }
 .mob4 {
   position: absolute;
-  left: 520px;
-  top: 170px;
+  left: 360px;
+  top: 80px;
 }
 .mob5 {
   position: absolute;
-  left: 720px;
-  top: 130px;
+  left: 690px;
+  top: 10px;
 }
 .mob6 {
   position: absolute;
-  left: 1100px;
-  top: 100px;
+  left: 960px;
+  top: 160px;
 }
 .mob7 {
   position: absolute;
-  left: 1180px;
+  left: 1100px;
   top: 320px;
 }
 .box {
@@ -55,15 +50,13 @@ body {
   font-family: "Source Code Pro", monospace;
   position: absolute;
   font-size: 13px;
-  left: 420px;
-  top: 580px;
+  left: 320px;
+  top: 480px;
   white-space: nowrap;
   overflow: hidden;
   border: 5px solid white;
   background-color: black;
   padding: 20px;
-  width: 550px;
-  height: 120px;
 }
 
 button {
@@ -71,10 +64,9 @@ button {
   background-color: black;
   color: white;
   font-size: 13px;
-  height: 80px;
-  width: 250px;
+  height: 50px;
+  width: 150px;
   cursor: pointer;
-  margin: 30px;
 }
 
 .antworttexte p {
@@ -86,7 +78,7 @@ button {
 #antwort5,
 #antwort7 {
   top: 600px;
-  left: 420px;
+  left: 400px;
   position: absolute;
 }
 #antwort2,
@@ -94,21 +86,18 @@ button {
 #antwort6,
 #antwort8 {
   top: 600px;
-  left: 720px;
+  left: 600px;
   position: absolute;
 }
 .arrow {
-  position: absolute;
+  position: relative;
   top: 600px;
   left: 1000px;
   display: none;
 }
-.nextweek {
-  border: none;
-}
 
 .speaker {
-  position: absolute;
-  top: 300px;
-  left: 570px;
+  position: relative;
+  top: 100px;
+  left: 450px;
 }
