@@ -4,6 +4,10 @@ if (localStorage.getItem("currentWeek") === null) {
 
 var currentWeek = localStorage.getItem("currentWeek");
 
+if (localStorage.getItem("scoreAmount") === null) {
+  localStorage.setItem("scoreAmount", "0");
+}
+
 // Postit White
 
 var postitmodal1 = document.getElementById("PostIt1Modal");
@@ -118,7 +122,7 @@ function checkPaper(keys, elementId) {
     // lade localstorage item mit dem key string
     var displayPaper = JSON.parse(localStorage.getItem(key));
     // überprüfe ob die week des items kleiner current week ist
-    if (!!displayPaper && parseInt(displayPaper.week) <= currentWeek) {
+    if (!!displayPaper && parseInt(displayPaper.week) < currentWeek) {
       paperShouldBeHidden = true;
     }
     // wenn ja setze die boolean variable true
@@ -153,43 +157,15 @@ checkPaper(["yesloan"], "myImg14");
 checkPaper(["yesloan"], "myImg15");
 checkPaper(["yesbureaucracy"], "myImg16");
 
-/**
- * Diese Funktion speichert die gewählten Entscheidungen und den dazugehörigen Itterpost (falls vorhanden) mit der jeweiligen Woche, in der es ausgewählt wurde.
- * @param {*} checkBoxId ID der Checkbox
- * @param {*} textBoxId ID des <li>, das auf dem PC Bildschirm erscheint
- * @param {*} key localStorage key der gewählten Entscheidung
- * @param {*} itterPost Speichert, welcher Itterpost angezeigt werden soll und in welcher Woche dieser angezeigt wird.
- */
-function saveDecision(checkBoxId, textBoxId, key, itterPost) {
-  var checkBox = document.getElementById(checkBoxId);
-  var text = document.getElementById(textBoxId);
-
-  if (checkBox.checked === true) {
-    text.style.display = "block";
-    if (!!key && !!itterPost) {
-      localStorage.setItem(
-        key,
-        JSON.stringify({ itterPost, week: currentWeek })
-      );
-    }
-  } else {
-    text.style.display = "none";
-    localStorage.removeItem(key);
-  }
-}
-
-function checktracking() {
-  saveDecision("gps", "gpstext", "gps", "gpspost");
-  saveDecision(
-    "datenhinterlegung",
-    "datenhinterlegungtext",
-    "datenhinterlegung",
-    "datenpost"
-  );
-  saveDecision("keins", "keintrackingtext", "keintracking");
-
-  getScore();
-}
+new CheckBox("gps", "gpstext", "gps", "gpspost", -10);
+new CheckBox(
+  "datenhinterlegung",
+  "datenhinterlegungtext",
+  "datenhinterlegung",
+  "datenpost",
+  -5
+);
+new CheckBox("keins", "keintrackingtext", "keintracking", "", 1);
 
 // Krankenkasse Entscheidung
 var modal2 = document.getElementById("myModal2");
@@ -538,12 +514,6 @@ function checkbureaucracy() {
 function getScore() {
   var score = 0;
 
-  if (document.getElementById("gps").checked === true) {
-    score = score - 10;
-  }
-  if (document.getElementById("datenhinterlegung").checked === true) {
-    score = score - 5;
-  }
   if (document.getElementById("jakrankenkasse").checked === true) {
     score = score - 3;
   }
@@ -604,9 +574,6 @@ function getScore() {
   }
   if (document.getElementById("jareise").checked === true) {
     score = score - 7;
-  }
-  if (document.getElementById("keins").checked === true) {
-    score = score + 1;
   }
   if (document.getElementById("neinkrankenkasse").checked === true) {
     score = score + 1;
