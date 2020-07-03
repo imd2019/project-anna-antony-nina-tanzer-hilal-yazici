@@ -10,6 +10,11 @@ var answer6 = document.getElementById("antwort6");
 var answer7 = document.getElementById("antwort7");
 var answer8 = document.getElementById("antwort8");
 var week2 = document.getElementById("woche2");
+var mob5 = document.getElementById("mob5");
+var mob6 = document.getElementById("mob6");
+var mob7 = document.getElementById("mob7");
+var mob8 = document.getElementById("mob8");
+var mob9 = document.getElementById("mob9");
 
 (function () {
   if (score <= -73) {
@@ -23,6 +28,8 @@ var week2 = document.getElementById("woche2");
   if (score <= -1 && score >= -72) {
     answer3.style.display = "block";
     answer4.style.display = "block";
+    mob5.style.display = "none";
+    mob10.style.display = "none";
   } else {
     answer3.style.display = "none";
     answer4.style.display = "none";
@@ -31,6 +38,9 @@ var week2 = document.getElementById("woche2");
   if (score <= 22 && score >= 0) {
     answer5.style.display = "block";
     answer6.style.display = "block";
+    mob5.style.display = "none";
+    mob6.style.display = "none";
+    mob7.style.display = "none";
   } else {
     answer5.style.display = "none";
     answer6.style.display = "none";
@@ -39,6 +49,11 @@ var week2 = document.getElementById("woche2");
   if (score >= 23) {
     answer7.style.display = "block";
     answer8.style.display = "block";
+    mob5.style.display = "none";
+    mob6.style.display = "none";
+    mob7.style.display = "none";
+    mob8.style.display = "none";
+    mob9.style.display = "none";
   } else {
     answer7.style.display = "none";
     answer8.style.display = "none";

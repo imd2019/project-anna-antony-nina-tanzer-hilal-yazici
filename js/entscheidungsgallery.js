@@ -153,7 +153,14 @@ checkPaper(["yesloan"], "myImg14");
 checkPaper(["yesloan"], "myImg15");
 checkPaper(["yesbureaucracy"], "myImg16");
 
-function saveDecision(checkBoxId, textBoxId, key, itterPost = "test") {
+/**
+ * Diese Funktion speichert die gewählten Entscheidungen und den dazugehörigen Itterpost (falls vorhanden) mit der jeweiligen Woche, in der es ausgewählt wurde.
+ * @param {*} checkBoxId ID der Checkbox
+ * @param {*} textBoxId ID des <li>, das auf dem PC Bildschirm erscheint
+ * @param {*} key localStorage key der gewählten Entscheidung
+ * @param {*} itterPost Speichert, welcher Itterpost angezeigt werden soll und in welcher Woche dieser angezeigt wird.
+ */
+function saveDecision(checkBoxId, textBoxId, key, itterPost) {
   var checkBox = document.getElementById(checkBoxId);
   var text = document.getElementById(textBoxId);
 
@@ -182,15 +189,6 @@ function checktracking() {
   saveDecision("keins", "keintrackingtext", "keintracking");
 
   getScore();
-}
-
-function checkpost() {
-  var post = document.getElementById("gpspost");
-  if (window.getComputedStyle(text).display === "block") {
-    post.style.display = "block";
-  } else {
-    post.style.display = "none";
-  }
 }
 
 // Krankenkasse Entscheidung

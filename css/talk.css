@@ -4,7 +4,6 @@
 }
 
 body {
-  background-size: 100%;
   background-repeat: no-repeat;
   background-color: black;
 }
@@ -17,46 +16,75 @@ body {
 .mob2 {
   position: absolute;
   left: 90px;
-  top: 160px;
+  top: 130px;
 }
 .mob3 {
   position: absolute;
-  left: 190px;
+  left: 1190px;
   top: 70px;
 }
 .mob4 {
   position: absolute;
-  left: 360px;
-  top: 80px;
+  left: 230px;
+  top: 530px;
 }
 .mob5 {
   position: absolute;
-  left: 690px;
-  top: 10px;
+  left: 320px;
+  top: 40px;
 }
 .mob6 {
   position: absolute;
-  left: 960px;
+  left: 180px;
   top: 160px;
 }
 .mob7 {
   position: absolute;
-  left: 1100px;
+  left: 1180px;
   top: 320px;
 }
+
+#mob8 {
+  margin-left: 1000px;
+}
+
+#mob9 {
+  margin-left: 900px;
+  top: 260px;
+}
+
+#mob10 {
+  margin-left: 1050px;
+  margin-top: 250px;
+}
+
+#mob5,
+#mob6,
+#mob7,
+#mob8,
+#mob9,
+#mob10 {
+  display: block;
+  position: absolute;
+}
+
 .box {
   word-break: normal;
   color: white;
   font-family: "Source Code Pro", monospace;
   position: absolute;
-  font-size: 13px;
-  left: 320px;
+  font-size: 18px;
+  left: 370px;
   top: 480px;
-  white-space: nowrap;
   overflow: hidden;
   border: 5px solid white;
   background-color: black;
   padding: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-right: 120px;
+  width: 550px;
+  height: 220px;
 }
 
 button {
@@ -78,16 +106,20 @@ button {
 #antwort5,
 #antwort7 {
   top: 600px;
-  left: 400px;
+  left: 450px;
   position: absolute;
+  height: 80px;
+  width: 250px;
 }
 #antwort2,
 #antwort4,
 #antwort6,
 #antwort8 {
   top: 600px;
-  left: 600px;
+  left: 750px;
   position: absolute;
+  height: 80px;
+  width: 250px;
 }
 .arrow {
   position: relative;
@@ -97,7 +129,7 @@ button {
 }
 
 .speaker {
-  position: relative;
+  position: absolute;
   top: 100px;
-  left: 450px;
+  left: 570px;
 }
