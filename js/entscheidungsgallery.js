@@ -165,7 +165,128 @@ new CheckBox(
   "datenpost",
   -5
 );
+
 new CheckBox("keins", "keintrackingtext", "keintracking", "", 1);
+new CheckBox("neinkrankenkasse", "neinkkstext", "keinkks", "", 1);
+new CheckBox(
+  "jakrankenkasse",
+  "jakkstext",
+  "jakrankenkasse",
+  "krankenkassepost",
+  -3
+);
+
+new CheckBox("neinkonzerne", "neinkonzernetext", "keinkonzerne", "", 1);
+new CheckBox("jakonzerne", "jakonzernetext", "jakonzerne", "konzernepost", -10);
+
+new CheckBox("neinreise", "neinreisetext", "keinreise", "", 1);
+new CheckBox("jareise", "jareisetext", "jareise", "reisepost", -7);
+
+new CheckBox("neinkameras", "neinkamerastext", "keinkameras", "", 1);
+new CheckBox(
+  "jagesichtserkennung",
+  "jagesichtserkennungtext",
+  "jagesichtserkennung",
+  "gesichtserkennungpost",
+  -6
+);
+new CheckBox(
+  "jawaermebild",
+  "jawaermebildtext",
+  "jawaermebild",
+  "waermebildpost",
+  -8
+);
+new CheckBox(
+  "waermebildgesichtserkennung",
+  "waermebildgesichtserkennungtext",
+  "waermebildgesichtserkennung",
+  "waermebildgesichtserkennungpost",
+  -10
+);
+new CheckBox("jakameras", "jakamerastext", "jakameras", "kamerapost", -9);
+
+new CheckBox(
+  "yesrealestate",
+  "yesrealestatetext",
+  "realestate",
+  "realestatepost",
+  -2
+);
+new CheckBox("norealestate", "norealestatetext", "norealestate", "", 1);
+
+new CheckBox("yesjobfield", "yesjobfieldtext", "jobfield", "jobfieldpost", 3);
+new CheckBox("nojobfield", "nojobfieldtext", "nojobfield", "", 1);
+
+new CheckBox("yesdeposit", "yesdeposittext", "deposit", "depositpost", 6);
+new CheckBox("nodeposit", "nodeposittext", "nodeposit", "", 1);
+
+new CheckBox(
+  "yescybertracking",
+  "yescybertrackingtext",
+  "cybertracking",
+  "cybertrackingpost",
+  -9
+);
+new CheckBox(
+  "cybertrackingandscore",
+  "cybertrackingandscoretext",
+  "cybertrackingandscore",
+  "cybertrackingandscorepost",
+  -10
+);
+new CheckBox(
+  "nocybertracking",
+  "nocybertrackingtext",
+  "nocybertracking",
+  "",
+  1
+);
+
+new CheckBox("yesvpn", "yesvpntext", "vpn", "vpnpost", -7);
+new CheckBox("novpn", "novpntext", "novpn", "", 1);
+
+new CheckBox("yespets", "yespetstext", "pets", "petpost", -3);
+new CheckBox("nopets", "nopetstext", "nopets", "", 1);
+
+new CheckBox(
+  "yessecurity",
+  "yessecuritytext",
+  "securitypolice",
+  "securitypolicepost",
+  -7
+);
+new CheckBox("nosecurity", "nosecuritystext", "nosecurity", "", 1);
+
+new CheckBox(
+  "yeseducation",
+  "yeseducationtext",
+  "education",
+  "educationpost",
+  -4
+);
+new CheckBox("noeducation", "noeducationtext", "noeducation", "", 1);
+
+new CheckBox("yesloan", "yesloantext", "loans", "loanpost", -5);
+new CheckBox("noloan", "noloantext", "noloans", "", 1);
+
+new CheckBox(
+  "yesblacklist",
+  "yesblacklisttext",
+  "blacklist",
+  "blacklistpost",
+  -4
+);
+new CheckBox("noblacklist", "noblacklisttext", "noblacklists", "", 1);
+
+new CheckBox(
+  "yesbureaucracy",
+  "yesbureaucracytext",
+  "bureaucracy",
+  "bureaucracypost",
+  -3
+);
+new CheckBox("nobureaucracy", "nobureaucracytext", "nobureaucracy", "", 1);
 
 // Krankenkasse Entscheidung
 var modal2 = document.getElementById("myModal2");
@@ -180,17 +301,6 @@ span2.onclick = function () {
   modal2.style.display = "none";
 };
 
-function checkkrankenkasse() {
-  saveDecision("neinkrankenkasse", "neinkkstext");
-  saveDecision(
-    "jakrankenkasse",
-    "jakkstext",
-    "jakrankenkasse",
-    "krankenkassepost"
-  );
-  getScore();
-}
-
 // Konzerne Entscheidung
 var modal3 = document.getElementById("myModal3");
 var img3 = document.getElementById("myImg3");
@@ -203,12 +313,6 @@ var span3 = document.getElementsByClassName("close3")[0];
 span3.onclick = function () {
   modal3.style.display = "none";
 };
-
-function checkkonzerne() {
-  saveDecision("neinkonzerne", "neinkonzernetext");
-  saveDecision("jakonzerne", "jakonzernetext", "jakonzerne", "konzernepost");
-  getScore();
-}
 
 // Reisedienstleister Entscheidung
 var modal4 = document.getElementById("myModal4");
@@ -223,12 +327,6 @@ span4.onclick = function () {
   modal4.style.display = "none";
 };
 
-function checkreise() {
-  saveDecision("neinreise", "neinreisetext");
-  saveDecision("jareise", "jareisetext", "jareise", "reisepost");
-  getScore();
-}
-
 // Kameras Entscheidung
 var modal5 = document.getElementById("myModal5");
 var img5 = document.getElementById("myImg5");
@@ -241,30 +339,6 @@ var span5 = document.getElementsByClassName("close5")[0];
 span5.onclick = function () {
   modal5.style.display = "none";
 };
-
-function checkkameras() {
-  saveDecision("neinkameras", "neinkamerastext");
-  saveDecision(
-    "jagesichtserkennung",
-    "jagesichtserkennungtext",
-    "jagesichtserkennung",
-    "gesichtserkennungpost"
-  );
-  saveDecision(
-    "jawaermebild",
-    "jawaermebildtext",
-    "jawaermebild",
-    "waermebildpost"
-  );
-  saveDecision(
-    "waermebildgesichtserkennung",
-    "waermebildgesichtserkennungtext",
-    "waermebildgesichtserkennung",
-    "waermebildgesichtserkennungpost"
-  );
-  saveDecision("jakameras", "jakamerastext", "jakameras", "kamerapost");
-  getScore();
-}
 
 // Realestate Entscheidung
 var modal6 = document.getElementById("myModal6");
@@ -279,17 +353,6 @@ span6.onclick = function () {
   modal6.style.display = "none";
 };
 
-function checkrealestate() {
-  saveDecision(
-    "yesrealestate",
-    "yesrealestatetext",
-    "realestate",
-    "realestatepost"
-  );
-  saveDecision("norealestate", "norealestatetext");
-  getScore();
-}
-
 // Berufsgruppen Entscheidung
 var modal7 = document.getElementById("myModal7");
 var img7 = document.getElementById("myImg7");
@@ -302,12 +365,6 @@ var span7 = document.getElementsByClassName("close7")[0];
 span7.onclick = function () {
   modal7.style.display = "none";
 };
-
-function checkjobfield() {
-  saveDecision("yesjobfield", "yesjobfieldtext", "jobfield", "jobfieldpost");
-  saveDecision("nojobfield", "nojobfieldtext");
-  getScore();
-}
 
 // Kaution Entscheidung
 var modal8 = document.getElementById("myModal8");
@@ -322,12 +379,6 @@ span8.onclick = function () {
   modal8.style.display = "none";
 };
 
-function checkjobfield() {
-  saveDecision("yesdeposit", "yesdeposittext", "deposit", "depositpost");
-  saveDecision("nodeposit", "nodeposittext");
-  getScore();
-}
-
 // Cybertracking Entscheidung
 var modal9 = document.getElementById("myModal9");
 var img9 = document.getElementById("myImg9");
@@ -340,23 +391,6 @@ var span9 = document.getElementsByClassName("close9")[0];
 span9.onclick = function () {
   modal9.style.display = "none";
 };
-
-function checkcybertracking() {
-  saveDecision(
-    "yescybertracking",
-    "yescybertrackingtext",
-    "cybertracking",
-    "cybertrackingpost"
-  );
-  saveDecision(
-    "cybertrackingandscore",
-    "cybertrackingandscoretext",
-    "cybertrackingandscore",
-    "cybertrackingandscorepost"
-  );
-  saveDecision("nocybertracking", "nocybertrackingtext");
-  getScore();
-}
 
 // VPN Entscheidung
 var modal10 = document.getElementById("myModal10");
@@ -371,12 +405,6 @@ span10.onclick = function () {
   modal10.style.display = "none";
 };
 
-function checkvpn() {
-  saveDecision("yesvpn", "yesvpntext", "vpn", "vpnpost");
-  saveDecision("novpn", "novpntext");
-  getScore();
-}
-
 // Haustiere Entscheidung
 var modal11 = document.getElementById("myModal11");
 var img11 = document.getElementById("myImg11");
@@ -389,12 +417,6 @@ var span11 = document.getElementsByClassName("close11")[0];
 span11.onclick = function () {
   modal11.style.display = "none";
 };
-
-function checkpets() {
-  saveDecision("yespets", "yespetstext", "pets", "petpost");
-  saveDecision("nopets", "nopetstext");
-  getScore();
-}
 
 // Sicherheitsdienste und Polizei Entscheidung
 var modal12 = document.getElementById("myModal12");
@@ -409,17 +431,6 @@ span12.onclick = function () {
   modal12.style.display = "none";
 };
 
-function checkpets() {
-  saveDecision(
-    "yessecurity",
-    "yessecuritytext",
-    "securitypolice",
-    "securitypolicepost"
-  );
-  saveDecision("nosecurity", "nosecuritystext");
-  getScore();
-}
-
 // Bildung Entscheidung
 var modal13 = document.getElementById("myModal13");
 var img13 = document.getElementById("myImg13");
@@ -432,17 +443,6 @@ var span13 = document.getElementsByClassName("close13")[0];
 span13.onclick = function () {
   modal13.style.display = "none";
 };
-
-function checkeducation() {
-  saveDecision(
-    "yeseducation",
-    "yeseducationtext",
-    "education",
-    "educationpost"
-  );
-  saveDecision("noeducation", "noeducationtext");
-  getScore();
-}
 
 // Kredite Entscheidung
 var modal14 = document.getElementById("myModal14");
@@ -457,12 +457,6 @@ span14.onclick = function () {
   modal14.style.display = "none";
 };
 
-function checkloan() {
-  saveDecision("yesloan", "yesloantext", "loans", "loanpost");
-  saveDecision("noloan", "noloantext");
-  getScore();
-}
-
 // Schwarze Liste Entscheidung
 var modal15 = document.getElementById("myModal15");
 var img15 = document.getElementById("myImg15");
@@ -476,17 +470,6 @@ span15.onclick = function () {
   modal15.style.display = "none";
 };
 
-function checkloan() {
-  saveDecision(
-    "yesblacklist",
-    "yesblacklisttext",
-    "blacklist",
-    "blacklistpost"
-  );
-  saveDecision("noblacklist", "noblacklisttext");
-  getScore();
-}
-
 // Bürokratie Entscheidung
 var modal16 = document.getElementById("myModal16");
 var img16 = document.getElementById("myImg16");
@@ -499,129 +482,6 @@ var span16 = document.getElementsByClassName("close16")[0];
 span16.onclick = function () {
   modal16.style.display = "none";
 };
-
-function checkbureaucracy() {
-  saveDecision(
-    "yesbureaucracy",
-    "yesbureaucracytext",
-    "bureaucracy",
-    "bureaucracypost"
-  );
-  saveDecision("nobureaucracy", "nobureaucracytext");
-  getScore();
-}
-
-function getScore() {
-  var score = 0;
-
-  if (document.getElementById("jakrankenkasse").checked === true) {
-    score = score - 3;
-  }
-  if (document.getElementById("jakonzerne").checked === true) {
-    score = score - 10;
-  }
-
-  if (document.getElementById("jareise").checked === true) {
-    score = score - 7;
-  }
-
-  /* Kamera */
-  if (document.getElementById("jagesichtserkennung").checked === true) {
-    score = score - 6;
-  }
-  if (document.getElementById("jawaermebild").checked === true) {
-    score = score - 8;
-  }
-  if (document.getElementById("jakameras").checked === true) {
-    score = score - 10;
-  }
-
-  if (document.getElementById("yesrealestate").checked === true) {
-    score = score - 2;
-  }
-  if (document.getElementById("yesjobfield").checked === true) {
-    score = score + 3;
-  }
-  if (document.getElementById("yesdeposit").checked === true) {
-    score = score + 6;
-  }
-  if (document.getElementById("yescybertracking").checked === true) {
-    score = score - 9;
-  }
-  if (document.getElementById("cybertrackingandscore").checked === true) {
-    score = score - 10;
-  }
-  if (document.getElementById("yesvpn").checked === true) {
-    score = score - 7;
-  }
-  if (document.getElementById("yespets").checked === true) {
-    score = score - 3;
-  }
-  if (document.getElementById("yessecurity").checked === true) {
-    score = score - 7;
-  }
-  if (document.getElementById("yeseducation").checked === true) {
-    score = score - 4;
-  }
-  if (document.getElementById("yesloan").checked === true) {
-    score = score - 5;
-  }
-  if (document.getElementById("yesblacklist").checked === true) {
-    score = score - 4;
-  }
-  if (document.getElementById("yesbureaucracy").checked === true) {
-    score = score - 3;
-  }
-  if (document.getElementById("jareise").checked === true) {
-    score = score - 7;
-  }
-  if (document.getElementById("neinkrankenkasse").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("neinkonzerne").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("neinreise").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("neinkameras").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("norealestate").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("nojobfield").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("nodeposit").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("nocybertracking").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("novpn").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("nopets").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("nosecurity").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("noeducation").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("noloan").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("noblacklist").checked === true) {
-    score = score + 1;
-  }
-  if (document.getElementById("nobureaucracy").checked === true) {
-    score = score + 1;
-  }
-  localStorage.setItem("scoreAmount", score);
-}
 
 function checkboxes() {
   var inputElems = document.getElementsByTagName("input"),
