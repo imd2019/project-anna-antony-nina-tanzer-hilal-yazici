@@ -121,17 +121,17 @@
         <div class="checkboxes1">
           <label class="container"
             >Keins von beiden
-            <input type="checkbox" id="keins" />
+            <input type="checkbox" id="keins" name="tracking" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Datenhinterlegung am Zielort
-            <input type="checkbox" id="datenhinterlegung" />
+            <input type="checkbox" id="datenhinterlegung" name="tracking" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >GPS Tracking
-            <input type="checkbox" id="gps" />
+            <input type="checkbox" id="gps" name="tracking" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -147,20 +147,12 @@
         <div class="checkboxes2">
           <label class="container"
             >Ja
-            <input
-              type="checkbox"
-              id="jakrankenkasse"
-              onclick="checkkrankenkasse()"
-            />
+            <input type="checkbox" id="jakrankenkasse" name="krankenkasse" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input
-              type="checkbox"
-              id="neinkrankenkasse"
-              onclick="checkkrankenkasse()"
-            />
+            <input type="checkbox" id="neinkrankenkasse" name="krankenkasse" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -174,16 +166,12 @@
         <div class="checkboxes3">
           <label class="container"
             >Nein
-            <input
-              type="checkbox"
-              id="neinkonzerne"
-              onclick="checkkonzerne()"
-            />
+            <input type="checkbox" id="neinkonzerne" name="konzerne" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Ja
-            <input type="checkbox" id="jakonzerne" onclick="checkkonzerne()" />
+            <input type="checkbox" id="jakonzerne" name="konzerne" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -197,12 +185,12 @@
         <div class="checkboxes4">
           <label class="container"
             >Nein
-            <input type="checkbox" id="neinreise" onclick="checkreise()" />
+            <input type="checkbox" id="neinreise" name="reise" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Ja
-            <input type="checkbox" id="jareise" onclick="checkreise()" />
+            <input type="checkbox" id="jareise" name="reise" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -216,21 +204,17 @@
         <div class="checkboxes5">
           <label class="container"
             >Ja
-            <input type="checkbox" id="jakameras" onclick="checkkameras()" />
+            <input type="checkbox" id="jakameras" name="kameras" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Gesichtserkennung installieren
-            <input
-              type="checkbox"
-              id="jagesichtserkennung"
-              onclick="checkkameras()"
-            />
+            <input type="checkbox" id="jagesichtserkennung" name="kameras" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Wärmebildfunktion installieren
-            <input type="checkbox" id="jawaermebild" onclick="checkkameras()" />
+            <input type="checkbox" id="jawaermebild" name="kameras" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
@@ -238,13 +222,13 @@
             <input
               type="checkbox"
               id="waermebildgesichtserkennung"
-              onclick="checkkameras()"
+              name="kameras"
             />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input type="checkbox" id="neinkameras" onclick="checkkameras()" />
+            <input type="checkbox" id="neinkameras" name="kameras" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -258,20 +242,12 @@
         <div class="checkboxes6">
           <label class="container"
             >Ja
-            <input
-              type="checkbox"
-              id="yesrealestate"
-              onclick="checkrealestate()"
-            />
+            <input type="checkbox" id="yesrealestate" name="realestate" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input
-              type="checkbox"
-              id="norealestate"
-              onclick="checkrealestate()"
-            />
+            <input type="checkbox" id="norealestate" name="realestate" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -285,12 +261,12 @@
         <div class="checkboxes7">
           <label class="container"
             >Ja
-            <input type="checkbox" id="yesjobfield" onclick="checkjobfield()" />
+            <input type="checkbox" id="yesjobfield" name="job" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input type="checkbox" id="nojobfield" onclick="checkjobfield()" />
+            <input type="checkbox" id="nojobfield" name="job" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -304,12 +280,12 @@
         <div class="checkboxes8">
           <label class="container"
             >Ja
-            <input type="checkbox" id="yesdeposit" onclick="checkdeposit()" />
+            <input type="checkbox" id="yesdeposit" name="deposit" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input type="checkbox" id="nodeposit" onclick="checkdeposit()" />
+            <input type="checkbox" id="nodeposit" name="deposit" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -323,11 +299,7 @@
         <div class="checkboxes9">
           <label class="container"
             >Ja
-            <input
-              type="checkbox"
-              id="yescybertracking"
-              onclick="checkcybertracking()"
-            />
+            <input type="checkbox" id="yescybertracking" name="cybertracking" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
@@ -335,17 +307,13 @@
             <input
               type="checkbox"
               id="cybertrackingandscore"
-              onclick="checkcybertracking()"
+              name="cybertracking"
             />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input
-              type="checkbox"
-              id="nocybertracking"
-              onclick="checkcybertracking()"
-            />
+            <input type="checkbox" id="nocybertracking" name="cybertracking" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -359,12 +327,12 @@
         <div class="checkboxes10">
           <label class="container"
             >Ja
-            <input type="checkbox" id="yesvpn" onclick="checkvpn()" />
+            <input type="checkbox" id="yesvpn" name="vpn" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input type="checkbox" id="novpn" onclick="checkvpn()" />
+            <input type="checkbox" id="novpn" name="vpn" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -378,12 +346,12 @@
         <div class="checkboxes11">
           <label class="container"
             >Ja
-            <input type="checkbox" id="yespets" onclick="checkpets()" />
+            <input type="checkbox" id="yespets" name="pets" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input type="checkbox" id="nopets" onclick="checkpets()" />
+            <input type="checkbox" id="nopets" name="pets" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -397,12 +365,12 @@
         <div class="checkboxes12">
           <label class="container"
             >Ja
-            <input type="checkbox" id="yessecurity" onclick="checksecurity()" />
+            <input type="checkbox" id="yessecurity" name="security" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input type="checkbox" id="nosecurity" onclick="checksecurity()" />
+            <input type="checkbox" id="nosecurity" name="security" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -416,20 +384,12 @@
         <div class="checkboxes13">
           <label class="container"
             >Ja
-            <input
-              type="checkbox"
-              id="yeseducation"
-              onclick="checkeducation()"
-            />
+            <input type="checkbox" id="yeseducation" name="education" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input
-              type="checkbox"
-              id="noeducation"
-              onclick="checkeducation()"
-            />
+            <input type="checkbox" id="noeducation" name="education" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -443,12 +403,12 @@
         <div class="checkboxes14">
           <label class="container"
             >Ja
-            <input type="checkbox" id="yesloan" onclick="checkloan()" />
+            <input type="checkbox" id="yesloan" name="loan" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input type="checkbox" id="noloan" onclick="checkloan()" />
+            <input type="checkbox" id="noloan" name="loan" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -462,20 +422,12 @@
         <div class="checkboxes15">
           <label class="container"
             >Ja
-            <input
-              type="checkbox"
-              id="yesblacklist"
-              onclick="checkblacklist()"
-            />
+            <input type="checkbox" id="yesblacklist" name="blacklist" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input
-              type="checkbox"
-              id="noblacklist"
-              onclick="checkblacklist()"
-            />
+            <input type="checkbox" id="noblacklist" name="blacklist" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -489,20 +441,12 @@
         <div class="checkboxes16">
           <label class="container"
             >Ja
-            <input
-              type="checkbox"
-              id="yesbureaucracy"
-              onclick="checkbureaucracy()"
-            />
+            <input type="checkbox" id="yesbureaucracy" name="bureaucracy" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input
-              type="checkbox"
-              id="nobureaucracy"
-              onclick="checkbureaucracy()"
-            />
+            <input type="checkbox" id="nobureaucracy" name="bureaucracy" />
             <span class="checkmark"></span>
           </label>
         </div>

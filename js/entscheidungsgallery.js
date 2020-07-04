@@ -157,136 +157,252 @@ checkPaper(["yesloan"], "myImg14");
 checkPaper(["yesloan"], "myImg15");
 checkPaper(["yesbureaucracy"], "myImg16");
 
-new CheckBox("gps", "gpstext", "gps", "gpspost", -10);
-new CheckBox(
+var button1 = new CheckBox("gps", "gpstext", "gps", "gpspost", -10);
+var button2 = new CheckBox(
   "datenhinterlegung",
   "datenhinterlegungtext",
   "datenhinterlegung",
   "datenpost",
   -5
 );
+var button3 = new CheckBox("keins", "keintrackingtext", "keintracking", "", 1);
 
-new CheckBox("keins", "keintrackingtext", "keintracking", "", 1);
-new CheckBox("neinkrankenkasse", "neinkkstext", "keinkks", "", 1);
-new CheckBox(
+button1.initEventListener([button2, button3]);
+button2.initEventListener([button1, button3]);
+button3.initEventListener([button2, button1]);
+
+var button4 = new CheckBox("neinkrankenkasse", "neinkkstext", "keinkks", "", 1);
+var button5 = new CheckBox(
   "jakrankenkasse",
   "jakkstext",
   "jakrankenkasse",
   "krankenkassepost",
   -3
 );
+button4.initEventListener([button5]);
+button5.initEventListener([button4]);
 
-new CheckBox("neinkonzerne", "neinkonzernetext", "keinkonzerne", "", 1);
-new CheckBox("jakonzerne", "jakonzernetext", "jakonzerne", "konzernepost", -10);
+var button6 = new CheckBox(
+  "neinkonzerne",
+  "neinkonzernetext",
+  "keinkonzerne",
+  "",
+  1
+);
+var button7 = new CheckBox(
+  "jakonzerne",
+  "jakonzernetext",
+  "jakonzerne",
+  "konzernepost",
+  -10
+);
+button6.initEventListener([button7]);
+button7.initEventListener([button6]);
 
-new CheckBox("neinreise", "neinreisetext", "keinreise", "", 1);
-new CheckBox("jareise", "jareisetext", "jareise", "reisepost", -7);
+var button8 = new CheckBox("neinreise", "neinreisetext", "keinreise", "", 1);
+var button9 = new CheckBox(
+  "jareise",
+  "jareisetext",
+  "jareise",
+  "reisepost",
+  -7
+);
+button8.initEventListener([button9]);
+button9.initEventListener([button8]);
 
-new CheckBox("neinkameras", "neinkamerastext", "keinkameras", "", 1);
-new CheckBox(
+var button10 = new CheckBox(
+  "neinkameras",
+  "neinkamerastext",
+  "keinkameras",
+  "",
+  1
+);
+var button11 = new CheckBox(
   "jagesichtserkennung",
   "jagesichtserkennungtext",
   "jagesichtserkennung",
   "gesichtserkennungpost",
   -6
 );
-new CheckBox(
+var button12 = new CheckBox(
   "jawaermebild",
   "jawaermebildtext",
   "jawaermebild",
   "waermebildpost",
   -8
 );
-new CheckBox(
+var button13 = new CheckBox(
   "waermebildgesichtserkennung",
   "waermebildgesichtserkennungtext",
   "waermebildgesichtserkennung",
   "waermebildgesichtserkennungpost",
   -10
 );
-new CheckBox("jakameras", "jakamerastext", "jakameras", "kamerapost", -9);
+var button14 = new CheckBox(
+  "jakameras",
+  "jakamerastext",
+  "jakameras",
+  "kamerapost",
+  -9
+);
+button10.initEventListener([button11, button12, button13, button14]);
+button11.initEventListener([button10, button12, button13, button14]);
+button12.initEventListener([button11, button10, button13, button14]);
+button13.initEventListener([button11, button10, button12, button14]);
+button14.initEventListener([button11, button10, button12, button13]);
 
-new CheckBox(
+var button15 = new CheckBox(
   "yesrealestate",
   "yesrealestatetext",
   "realestate",
   "realestatepost",
   -2
 );
-new CheckBox("norealestate", "norealestatetext", "norealestate", "", 1);
+var button16 = new CheckBox(
+  "norealestate",
+  "norealestatetext",
+  "norealestate",
+  "",
+  1
+);
+button15.initEventListener([button16]);
+button16.initEventListener([button15]);
 
-new CheckBox("yesjobfield", "yesjobfieldtext", "jobfield", "jobfieldpost", 3);
-new CheckBox("nojobfield", "nojobfieldtext", "nojobfield", "", 1);
+var button17 = new CheckBox(
+  "yesjobfield",
+  "yesjobfieldtext",
+  "jobfield",
+  "jobfieldpost",
+  3
+);
+var button18 = new CheckBox(
+  "nojobfield",
+  "nojobfieldtext",
+  "nojobfield",
+  "",
+  1
+);
+button17.initEventListener([button18]);
+button18.initEventListener([button17]);
 
-new CheckBox("yesdeposit", "yesdeposittext", "deposit", "depositpost", 6);
-new CheckBox("nodeposit", "nodeposittext", "nodeposit", "", 1);
+var button19 = new CheckBox(
+  "yesdeposit",
+  "yesdeposittext",
+  "deposit",
+  "depositpost",
+  6
+);
+var button20 = new CheckBox("nodeposit", "nodeposittext", "nodeposit", "", 1);
+button19.initEventListener([button20]);
+button20.initEventListener([button19]);
 
-new CheckBox(
+var button21 = new CheckBox(
   "yescybertracking",
   "yescybertrackingtext",
   "cybertracking",
   "cybertrackingpost",
   -9
 );
-new CheckBox(
+var button22 = new CheckBox(
   "cybertrackingandscore",
   "cybertrackingandscoretext",
   "cybertrackingandscore",
   "cybertrackingandscorepost",
   -10
 );
-new CheckBox(
+var button23 = new CheckBox(
   "nocybertracking",
   "nocybertrackingtext",
   "nocybertracking",
   "",
   1
 );
+button21.initEventListener([button22, button23]);
+button22.initEventListener([button21, button23]);
+button23.initEventListener([button21, button22]);
 
-new CheckBox("yesvpn", "yesvpntext", "vpn", "vpnpost", -7);
-new CheckBox("novpn", "novpntext", "novpn", "", 1);
+var button24 = new CheckBox("yesvpn", "yesvpntext", "vpn", "vpnpost", -7);
+var button25 = new CheckBox("novpn", "novpntext", "novpn", "", 1);
+button24.initEventListener([button25]);
+button25.initEventListener([button24]);
 
-new CheckBox("yespets", "yespetstext", "pets", "petpost", -3);
-new CheckBox("nopets", "nopetstext", "nopets", "", 1);
+var button26 = new CheckBox("yespets", "yespetstext", "pets", "petpost", -3);
+var button27 = new CheckBox("nopets", "nopetstext", "nopets", "", 1);
+button26.initEventListener([button27]);
+button27.initEventListener([button26]);
 
-new CheckBox(
+var button28 = new CheckBox(
   "yessecurity",
   "yessecuritytext",
   "securitypolice",
   "securitypolicepost",
   -7
 );
-new CheckBox("nosecurity", "nosecuritystext", "nosecurity", "", 1);
+var button29 = new CheckBox(
+  "nosecurity",
+  "nosecuritystext",
+  "nosecurity",
+  "",
+  1
+);
+button28.initEventListener([button29]);
+button29.initEventListener([button28]);
 
-new CheckBox(
+var button30 = new CheckBox(
   "yeseducation",
   "yeseducationtext",
   "education",
   "educationpost",
   -4
 );
-new CheckBox("noeducation", "noeducationtext", "noeducation", "", 1);
+var button31 = new CheckBox(
+  "noeducation",
+  "noeducationtext",
+  "noeducation",
+  "",
+  1
+);
+button30.initEventListener([button31]);
+button31.initEventListener([button30]);
 
-new CheckBox("yesloan", "yesloantext", "loans", "loanpost", -5);
-new CheckBox("noloan", "noloantext", "noloans", "", 1);
+var button32 = new CheckBox("yesloan", "yesloantext", "loans", "loanpost", -5);
+var button33 = new CheckBox("noloan", "noloantext", "noloans", "", 1);
+button32.initEventListener([button33]);
+button33.initEventListener([button32]);
 
-new CheckBox(
+var button34 = new CheckBox(
   "yesblacklist",
   "yesblacklisttext",
   "blacklist",
   "blacklistpost",
   -4
 );
-new CheckBox("noblacklist", "noblacklisttext", "noblacklists", "", 1);
+var button35 = new CheckBox(
+  "noblacklist",
+  "noblacklisttext",
+  "noblacklists",
+  "",
+  1
+);
+button34.initEventListener([button35]);
+button35.initEventListener([button34]);
 
-new CheckBox(
+var button36 = new CheckBox(
   "yesbureaucracy",
   "yesbureaucracytext",
   "bureaucracy",
   "bureaucracypost",
   -3
 );
-new CheckBox("nobureaucracy", "nobureaucracytext", "nobureaucracy", "", 1);
+var button37 = new CheckBox(
+  "nobureaucracy",
+  "nobureaucracytext",
+  "nobureaucracy",
+  "",
+  1
+);
+button36.initEventListener([button37]);
+button37.initEventListener([button36]);
 
 // Krankenkasse Entscheidung
 var modal2 = document.getElementById("myModal2");
@@ -488,10 +604,11 @@ function checkboxes() {
     count = 0;
 
   for (var i = 0; i < inputElems.length; i++) {
-    if (inputElems[i].type == "checkbox" && inputElems[i].checked == true) {
+    if (inputElems[i].type == "radio" && inputElems[i].checked == true) {
       count++;
     }
   }
+
   var woche1 = document.getElementById("weiter");
   if (count == 4) {
     woche1.style.display = "block";
