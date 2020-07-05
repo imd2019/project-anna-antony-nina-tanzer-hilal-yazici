@@ -138,12 +138,13 @@
         </p>
       </div>
     </div>
-    <a href="../index.html" class="fertig" onclick="clear()"
-      >Zum Startbildschirm</a
-    >
+    <button class="fertig" onclick="restart()">
+      Zum Startbildschirm
+    </button>
   </body>
   <script>
-    function clear() {
+    function restart() {
+      window.location.href = "../index.html";
       window.localStorage.clear();
     }
   </script>

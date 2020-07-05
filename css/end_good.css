@@ -47,4 +47,7 @@ body {
   left: 855px;
   top: 750px;
   position: absolute;
+  border: none;
+  background-color: black;
+  cursor: pointer;
 }
