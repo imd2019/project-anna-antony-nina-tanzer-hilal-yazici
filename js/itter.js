@@ -8,7 +8,6 @@ function checkPost(key, elementId) {
   if (!!displayPost && parseInt(displayPost.week) === currentWeek) {
     document.getElementById(elementId).style.display = "block";
   }
-  console.log("test");
 }
 
 var currentWeek = parseInt(localStorage.getItem("currentWeek"));

@@ -348,7 +348,7 @@ var button28 = new CheckBox(
 );
 var button29 = new CheckBox(
   "nosecurity",
-  "nosecuritystext",
+  "nosecuritytext",
   "nosecurity",
   "",
   1

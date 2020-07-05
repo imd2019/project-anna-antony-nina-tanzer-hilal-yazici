@@ -6,6 +6,8 @@
 body {
   background-repeat: no-repeat;
   background-color: black;
+  height: 820px;
+  width: 1440px;
 }
 .mob1 {
   position: absolute;
@@ -85,7 +87,7 @@ p {
   height: 220px;
 }
 .arrow {
-  position: relative;
+  position: absolute;
   top: 600px;
   left: 1100px;
 }

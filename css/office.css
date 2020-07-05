@@ -258,67 +258,73 @@ body {
 }
 
 #postits {
-  display: none;
+  position: absolute;
 }
 .postits {
-  display: flex;
   z-index: 6;
 }
 /*white*/
 .postit1 {
   z-index: 7;
-  margin-left: -900px;
+  margin-left: 100px;
   margin-top: 170px;
   height: 50px;
   width: 50px;
+  position: absolute;
 }
 
 .postit4 {
   z-index: 7;
-  margin-left: -100px;
+  margin-left: 120px;
   margin-top: 250px;
   height: 50px;
   width: 50px;
+  position: absolute;
 }
 
 .postit5 {
   z-index: 7;
-  margin-left: -140px;
+  margin-left: 180px;
   margin-top: 210px;
   height: 50px;
   width: 50px;
+  position: absolute;
 }
 
 .postit6 {
   z-index: 7;
-  margin-left: -150px;
+  margin-left: 340px;
   margin-top: 220px;
   height: 50px;
   width: 50px;
+  position: absolute;
 }
 .postit7 {
   z-index: 7;
-  margin-left: -10px;
+  margin-left: 290px;
   margin-top: 140px;
   height: 50px;
   width: 50px;
+  position: absolute;
 }
 
 /*Green*/
 .postit2 {
   z-index: 7;
   margin-left: 200px;
-  margin-top: 270px;
+  margin-top: 290px;
   height: 50px;
   width: 50px;
+  position: absolute;
 }
 /*Red*/
 .postit3 {
   z-index: 7;
-  margin-left: -290px;
+  margin-left: 280px;
   margin-top: 280px;
   height: 50px;
   width: 50px;
+  position: absolute;
 }
 
 #PostIt1 {
