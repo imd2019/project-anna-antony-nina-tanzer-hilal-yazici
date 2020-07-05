@@ -133,21 +133,22 @@ function checkPaper(keys, elementId) {
 }
 
 checkPaper(["gps", "datenhinterlegung", "keintracking"], "myImg");
-checkPaper(["jakrankenkasse"], "myImg2");
-checkPaper(["jakonzerne"], "myImg3");
-checkPaper(["jareise"], "myImg4");
+checkPaper(["jakrankenkasse", "keinkks"], "myImg2");
+checkPaper(["jakonzerne", "keinkonzerne"], "myImg3");
+checkPaper(["jareise", "keinreise"], "myImg4");
 checkPaper(
   [
     "jakameras",
     "jagesichtserkennung",
     "jawaermebild",
     "waermebildgesichtserkennung",
+    "keinkameras",
   ],
   "myImg5"
 );
-checkPaper(["yesrealestate"], "myImg6");
-checkPaper(["yesjobfield"], "myImg7");
-checkPaper(["yesdeposit"], "myImg8");
+checkPaper(["yesrealestate", "norealestate"], "myImg6");
+checkPaper(["yesjobfield", "nojobfield"], "myImg7");
+checkPaper(["yesdeposit", "nodeposit"], "myImg8");
 checkPaper(["yescybertracking"], "myImg9");
 checkPaper(["yesvpn"], "myImg10");
 checkPaper(["yespets"], "myImg11");

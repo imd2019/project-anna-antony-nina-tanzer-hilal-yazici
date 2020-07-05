@@ -95,6 +95,7 @@ button {
   height: 50px;
   width: 150px;
   cursor: pointer;
+  margin-left: 80px;
 }
 
 .antworttexte p {

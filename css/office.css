@@ -192,8 +192,8 @@ body {
 }
 .papier9 {
   z-index: 7;
-  margin-left: -1120px;
-  margin-top: 500px;
+  margin-left: -1100px;
+  margin-top: 530px;
   height: 80px;
   width: 100px;
   position: absolute;
@@ -208,7 +208,7 @@ body {
 }
 .papier11 {
   z-index: 7;
-  margin-left: -960px;
+  margin-left: -940px;
   margin-top: 490px;
   height: 80px;
   width: 100px;
@@ -232,8 +232,8 @@ body {
 }
 .papier14 {
   z-index: 7;
-  margin-left: -1100px;
-  margin-top: 540px;
+  margin-left: -1120px;
+  margin-top: 620px;
   height: 80px;
   width: 100px;
   height: 70px;
@@ -536,67 +536,67 @@ body {
 }
 
 .checkboxes1 {
-  margin-top: -140px;
+  margin-top: 590px;
   margin-left: -40px;
 }
 .checkboxes2 {
-  margin-top: -280px;
+  margin-top: 450px;
   margin-left: -40px;
 }
 .checkboxes3 {
-  margin-top: -190px;
-  margin-left: -45px;
+  margin-top: 535px;
+  margin-left: -40px;
 }
 .checkboxes4 {
-  margin-top: -200px;
-  margin-left: -45px;
+  margin-top: 530px;
+  margin-left: -40px;
 }
 .checkboxes5 {
-  margin-top: -230px;
+  margin-top: 500px;
   margin-left: -45px;
 }
 .checkboxes6 {
-  margin-top: -350px;
+  margin-top: 380px;
   margin-left: -40px;
 }
 .checkboxes7 {
-  margin-top: -270px;
+  margin-top: 450px;
   margin-left: -40px;
 }
 .checkboxes8 {
-  margin-top: -350px;
+  margin-top: 380px;
   margin-left: -40px;
 }
 .checkboxes9 {
-  margin-top: -140px;
+  margin-top: 580px;
   margin-left: -40px;
 }
 .checkboxes10 {
-  margin-top: -270px;
+  margin-top: 450px;
   margin-left: -40px;
 }
 .checkboxes11 {
-  margin-top: -390px;
+  margin-top: 340px;
   margin-left: -40px;
 }
 .checkboxes12 {
-  margin-top: -270px;
-  margin-left: -40px;
+  margin-top: 450px;
+  margin-left: -45px;
 }
 .checkboxes13 {
-  margin-top: -350px;
+  margin-top: 380px;
   margin-left: -40px;
 }
 .checkboxes14 {
-  margin-top: -260px;
+  margin-top: 460px;
   margin-left: -40px;
 }
 .checkboxes15 {
-  margin-top: -310px;
+  margin-top: 420px;
   margin-left: -40px;
 }
 .checkboxes16 {
-  margin-top: -370px;
+  margin-top: 350px;
   margin-left: -40px;
 }
 
