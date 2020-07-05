@@ -8,6 +8,16 @@ if (localStorage.getItem("scoreAmount") === null) {
   localStorage.setItem("scoreAmount", "0");
 }
 
+var decisionsMade = localStorage.getItem("decisionsAmount");
+if (localStorage.getItem("decisionsAmount") === null) {
+  localStorage.setItem("decisionsAmount", "0");
+}
+
+if (currentWeek >= 2) {
+  var postits = document.getElementById("postits");
+  postits.style.display = "block";
+}
+
 // Postit White
 
 var postitmodal1 = document.getElementById("PostIt1Modal");
@@ -132,121 +142,115 @@ function checkPaper(keys, elementId) {
     document.getElementById(elementId).style.display = "none";
 }
 
-checkPaper(["gps", "datenhinterlegung", "keintracking"], "myImg");
-checkPaper(["jakrankenkasse", "keinkks"], "myImg2");
-checkPaper(["jakonzerne", "keinkonzerne"], "myImg3");
-checkPaper(["jareise", "keinreise"], "myImg4");
+checkPaper(["gps", "personaldata", "notracking"], "myImg");
+checkPaper(["healthinsurance", "nohealthinsurance"], "myImg2");
+checkPaper(["corporation", "nocorporation"], "myImg3");
+checkPaper(["travel", "notravel"], "myImg4");
 checkPaper(
   [
-    "jakameras",
-    "jagesichtserkennung",
-    "jawaermebild",
-    "waermebildgesichtserkennung",
-    "keinkameras",
+    "cameras",
+    "facialrecognition",
+    "thermalimage",
+    "thermalimagefacialrecognition",
+    "nocameras",
   ],
   "myImg5"
 );
-checkPaper(["yesrealestate", "norealestate"], "myImg6");
-checkPaper(["yesjobfield", "nojobfield"], "myImg7");
-checkPaper(["yesdeposit", "nodeposit"], "myImg8");
+checkPaper(["realestate", "norealestate"], "myImg6");
+checkPaper(["jobfield", "nojobfield"], "myImg7");
+checkPaper(["deposit", "nodeposit"], "myImg8");
 checkPaper(
-  ["yescybertracking", "cybertrackingandscore", "nocybertracking"],
+  ["cybertracking", "cybertrackingandscore", "nocybertracking"],
   "myImg9"
 );
-checkPaper(["yesvpn", "novpn"], "myImg10");
-checkPaper(["yespets", "nopets"], "myImg11");
-checkPaper(["yessecurity", "nosecurity"], "myImg12");
-checkPaper(["yeseducation", "noeducation"], "myImg13");
-checkPaper(["yesloan", "noloan"], "myImg14");
-checkPaper(["yesblacklist", "noblacklist"], "myImg15");
-checkPaper(["yesbureaucracy", "nobureaucracy"], "myImg16");
+checkPaper(["vpn", "novpn"], "myImg10");
+checkPaper(["pets", "nopets"], "myImg11");
+checkPaper(["securitypolice", "nosecurity"], "myImg12");
+checkPaper(["education", "noeducation"], "myImg13");
+checkPaper(["loans", "noloans"], "myImg14");
+checkPaper(["blacklist", "noblacklists"], "myImg15");
+checkPaper(["bureaucracy", "nobureaucracy"], "myImg16");
 
 var button1 = new CheckBox("gps", "gpstext", "gps", "gpspost", -10);
 var button2 = new CheckBox(
-  "datenhinterlegung",
-  "datenhinterlegungtext",
-  "datenhinterlegung",
-  "datenpost",
+  "personaldata",
+  "personaldatatext",
+  "personaldata",
+  "personaldatapost",
   -5
 );
-var button3 = new CheckBox("keins", "keintrackingtext", "keintracking", "", 1);
+var button3 = new CheckBox("notracking", "notrackingtext", "notracking", "", 1);
 
 button1.initEventListener([button2, button3]);
 button2.initEventListener([button1, button3]);
 button3.initEventListener([button2, button1]);
 
-var button4 = new CheckBox("neinkrankenkasse", "neinkkstext", "keinkks", "", 1);
+var button4 = new CheckBox(
+  "nohealthinsurance",
+  "nohealthinsurancetext",
+  "nohealthinsurance",
+  "",
+  1
+);
 var button5 = new CheckBox(
-  "jakrankenkasse",
-  "jakkstext",
-  "jakrankenkasse",
-  "krankenkassepost",
+  "healthinsurance",
+  "healthinsurancetext",
+  "healthinsurance",
+  "healthinsurancepost",
   -3
 );
 button4.initEventListener([button5]);
 button5.initEventListener([button4]);
 
 var button6 = new CheckBox(
-  "neinkonzerne",
-  "neinkonzernetext",
-  "keinkonzerne",
+  "nocorporation",
+  "nocorporationtext",
+  "nocorporation",
   "",
   1
 );
 var button7 = new CheckBox(
-  "jakonzerne",
-  "jakonzernetext",
-  "jakonzerne",
-  "konzernepost",
+  "corporation",
+  "corporationtext",
+  "corporation",
+  "corporationpost",
   -10
 );
 button6.initEventListener([button7]);
 button7.initEventListener([button6]);
 
-var button8 = new CheckBox("neinreise", "neinreisetext", "keinreise", "", 1);
-var button9 = new CheckBox(
-  "jareise",
-  "jareisetext",
-  "jareise",
-  "reisepost",
-  -7
-);
+var button8 = new CheckBox("notravel", "notraveltext", "notravel", "", 1);
+var button9 = new CheckBox("travel", "traveltext", "travel", "travelpost", -7);
 button8.initEventListener([button9]);
 button9.initEventListener([button8]);
 
-var button10 = new CheckBox(
-  "neinkameras",
-  "neinkamerastext",
-  "keinkameras",
-  "",
-  1
-);
+var button10 = new CheckBox("nocameras", "nocamerastext", "nocameras", "", 1);
 var button11 = new CheckBox(
-  "jagesichtserkennung",
-  "jagesichtserkennungtext",
-  "jagesichtserkennung",
-  "gesichtserkennungpost",
+  "facialrecognition",
+  "facialrecognitiontext",
+  "facialrecognition",
+  "facialrecognitionpost",
   -6
 );
 var button12 = new CheckBox(
-  "jawaermebild",
-  "jawaermebildtext",
-  "jawaermebild",
-  "waermebildpost",
+  "thermalimage",
+  "thermalimagetext",
+  "thermalimage",
+  "thermalimagepost",
   -8
 );
 var button13 = new CheckBox(
-  "waermebildgesichtserkennung",
-  "waermebildgesichtserkennungtext",
-  "waermebildgesichtserkennung",
-  "waermebildgesichtserkennungpost",
+  "thermalimagefacialrecognition",
+  "thermalimagefacialrecognitiontext",
+  "thermalimagefacialrecognition",
+  "thermalimagefacialrecognitionpost",
   -10
 );
 var button14 = new CheckBox(
-  "jakameras",
-  "jakamerastext",
-  "jakameras",
-  "kamerapost",
+  "cameras",
+  "camerastext",
+  "cameras",
+  "cameraspost",
   -9
 );
 button10.initEventListener([button11, button12, button13, button14]);
@@ -602,21 +606,3 @@ var span16 = document.getElementsByClassName("close16")[0];
 span16.onclick = function () {
   modal16.style.display = "none";
 };
-
-function checkboxes() {
-  var inputElems = document.getElementsByTagName("input"),
-    count = 0;
-
-  for (var i = 0; i < inputElems.length; i++) {
-    if (inputElems[i].type == "radio" && inputElems[i].checked == true) {
-      count++;
-    }
-  }
-
-  var woche1 = document.getElementById("weiter");
-  if (count == 4) {
-    woche1.style.display = "block";
-  } else {
-    woche1.style.display = "none";
-  }
-}

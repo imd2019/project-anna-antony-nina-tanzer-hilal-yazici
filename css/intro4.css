@@ -5,11 +5,11 @@
 
 body {
   background-image: url(../assets/intro4.png);
-  height: 100%;
-  width: 100%;
-  background-size: 100%;
   background-repeat: no-repeat;
   background-color: black;
+  height: 1440px;
+  width: 820px;
+  background-size: 100%;
 }
 
 h1 {
@@ -33,12 +33,12 @@ p {
   border: 5px solid white;
   background-color: black;
   padding: 20px;
-  padding-bottom: 120px;
-  padding-right: 130px;
+  padding-bottom: 130px;
+  padding-right: 100px;
 }
 
 img {
-  position: relative;
+  position: absolute;
   top: 700px;
-  left: 1250px;
+  left: 1200px;
 }

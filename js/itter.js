@@ -8,19 +8,20 @@ function checkPost(key, elementId) {
   if (!!displayPost && parseInt(displayPost.week) === currentWeek) {
     document.getElementById(elementId).style.display = "block";
   }
+  console.log("test");
 }
 
 var currentWeek = parseInt(localStorage.getItem("currentWeek"));
 
 checkPost("gps", "gpspost");
-checkPost("datenhinterlegung", "datenpost");
-checkPost("jakrankenkasse", "krankenkassepost");
-checkPost("jakonzerne", "konzernepost");
-checkPost("jareise", "reisepost");
-checkPost("jagesichtserkennung", "gesichtserkennungpost");
-checkPost("jawaermebild", "waermebildpost");
-checkPost("kamerapost", "jakameras");
-checkPost("waermebildgesichtserkennung", "waermebildgesichtserkennungpost");
+checkPost("personaldata", "personaldatapost");
+checkPost("healthinsurance", "healthinsurancepost");
+checkPost("corporation", "corporationpost");
+checkPost("travel", "travelpost");
+checkPost("facialrecognition", "facialrecognitionpost");
+checkPost("thermalimage", "thermalimagepost");
+checkPost("cameras", "cameraspost");
+checkPost("thermalimagefacialrecognition", "thermalimagefacialrecognitionpost");
 checkPost("realestate", "realestatepost");
 checkPost("jobfield", "jobfieldpost");
 checkPost("deposit", "depositpost");

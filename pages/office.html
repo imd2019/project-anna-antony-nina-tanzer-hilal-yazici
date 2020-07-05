@@ -7,24 +7,24 @@
     <link href="../css/office.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <body onclick="checkboxes()">
+  <body>
     <div class="bg"></div>
     <div class="pctext">
       <ul class="pclist">
         <li id="gpstext">GPS-Tracking ✓</li>
-        <li id="datenhinterlegungtext">Datenhinterlegung ✓</li>
-        <li id="keintrackingtext">Kein Tracking ✖</li>
-        <li id="neinkkstext">Krankenkasse ✖</li>
-        <li id="jakkstext">Krankenkasse ✓</li>
-        <li id="neinkonzernetext">Konzerne ✖</li>
-        <li id="jakonzernetext">Konzerne ✓</li>
-        <li id="neinreisetext">Reisedienstleister ✖</li>
-        <li id="jareisetext">Reisedienstleister ✓</li>
-        <li id="neinkamerastext">Kameras installieren ✖</li>
-        <li id="jakamerastext">Kameras installieren ✓</li>
-        <li id="jagesichtserkennungtext">Gesichtserkennung ✓</li>
-        <li id="jawaermebildtext">Wärmebildfunktion ✓</li>
-        <li id="waermebildgesichtserkennungtext">
+        <li id="personaldatatext">Datenhinterlegung ✓</li>
+        <li id="notrackingtext">Kein Tracking ✖</li>
+        <li id="nohealthinsurancetext">Krankenkasse ✖</li>
+        <li id="healthinsurancetext">Krankenkasse ✓</li>
+        <li id="nocorporationtext">Konzerne ✖</li>
+        <li id="corporationtext">Konzerne ✓</li>
+        <li id="notraveltext">Reisedienstleister ✖</li>
+        <li id="traveltext">Reisedienstleister ✓</li>
+        <li id="nocamerastext">Kameras installieren ✖</li>
+        <li id="camerastext">Kameras installieren ✓</li>
+        <li id="facialrecognitiontext">Gesichtserkennung ✓</li>
+        <li id="thermalimagetext">Wärmebildfunktion ✓</li>
+        <li id="thermalimagefacialrecognitiontext">
           Wärmebildfunktion, Gesichtserkennung ✓
         </li>
         <li id="yesrealestatetext">Immobilienberater ✓</li>
@@ -67,7 +67,7 @@
 
     <!----------------------------PostIts-------------------------------------->
     <!----- White---->
-    <div class="postits">
+    <div class="postits" id="postits">
       <img src="../assets/postitweiss.png" class="postit1" id="PostIt1" />
       <div id="PostIt1Modal" class="modal">
         <span class="closepostit1">&times;</span>
@@ -121,12 +121,12 @@
         <div class="checkboxes1">
           <label class="container"
             >Keins von beiden
-            <input type="checkbox" id="keins" name="tracking" />
+            <input type="checkbox" id="notracking" name="tracking" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Datenhinterlegung am Zielort
-            <input type="checkbox" id="datenhinterlegung" name="tracking" />
+            <input type="checkbox" id="personaldata" name="tracking" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
@@ -147,12 +147,12 @@
         <div class="checkboxes2">
           <label class="container"
             >Ja
-            <input type="checkbox" id="jakrankenkasse" name="krankenkasse" />
+            <input type="checkbox" id="healthinsurance" name="krankenkasse" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input type="checkbox" id="neinkrankenkasse" name="krankenkasse" />
+            <input type="checkbox" id="nohealthinsurance" name="krankenkasse" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -166,12 +166,12 @@
         <div class="checkboxes3">
           <label class="container"
             >Nein
-            <input type="checkbox" id="neinkonzerne" name="konzerne" />
+            <input type="checkbox" id="nocorporation" name="konzerne" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Ja
-            <input type="checkbox" id="jakonzerne" name="konzerne" />
+            <input type="checkbox" id="corporation" name="konzerne" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -185,12 +185,12 @@
         <div class="checkboxes4">
           <label class="container"
             >Nein
-            <input type="checkbox" id="neinreise" name="reise" />
+            <input type="checkbox" id="notravel" name="reise" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Ja
-            <input type="checkbox" id="jareise" name="reise" />
+            <input type="checkbox" id="travel" name="reise" />
             <span class="checkmark"></span>
           </label>
         </div>
@@ -204,31 +204,31 @@
         <div class="checkboxes5">
           <label class="container"
             >Ja
-            <input type="checkbox" id="jakameras" name="kameras" />
+            <input type="checkbox" id="cameras" name="kameras" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Gesichtserkennung installieren
-            <input type="checkbox" id="jagesichtserkennung" name="kameras" />
+            <input type="checkbox" id="facialrecognition" name="kameras" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Wärmebildfunktion installieren
-            <input type="checkbox" id="jawaermebild" name="kameras" />
+            <input type="checkbox" id="thermalimage" name="kameras" />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Beide Zusatzoptionen
             <input
               type="checkbox"
-              id="waermebildgesichtserkennung"
+              id="thermalimagefacialrecognition"
               name="kameras"
             />
             <span class="checkmark"></span>
           </label>
           <label class="container"
             >Nein
-            <input type="checkbox" id="neinkameras" name="kameras" />
+            <input type="checkbox" id="nocameras" name="kameras" />
             <span class="checkmark"></span>
           </label>
         </div>

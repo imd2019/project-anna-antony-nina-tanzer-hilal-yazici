@@ -257,6 +257,9 @@ body {
   position: absolute;
 }
 
+#postits {
+  display: none;
+}
 .postits {
   display: flex;
   z-index: 6;
@@ -671,7 +674,7 @@ body {
   text-decoration: none;
   color: #b22222;
   z-index: 2;
-  margin-left: -710px;
+  margin-left: -580px;
   margin-top: 450px;
   position: absolute;
   display: none;
