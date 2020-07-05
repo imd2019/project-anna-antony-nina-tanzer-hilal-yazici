@@ -13,6 +13,11 @@
   </head>
   <body>
     <div class="box">
+      <p class="standardtext">
+        Herzlichen Glückwunsch, du hast es geschafft die Bürger zu täuschen! Du
+        kannst nun, einen Überwachungsstaat aufbauen. Denn Vertrauen ist zwar
+        gut, Kontrolle aber immer besser.
+      </p>
       <div class="endText" id="gpsend">
         <p>
           Die Bevölkerung wird nun dauerhaft über GPS getrackt.
@@ -133,8 +138,14 @@
         </p>
       </div>
     </div>
+    <a href="../index.html" class="fertig" onclick="clear()"
+      >Zum Startbildschirm</a
+    >
   </body>
-  <script src="../js/classes.js"></script>
-  <script src="../js/entscheidungsgallery.js "></script>
+  <script>
+    function clear() {
+      window.localStorage.clear();
+    }
+  </script>
   <script src="../js/goodend.js"></script>
 </html>
