@@ -149,14 +149,17 @@ checkPaper(
 checkPaper(["yesrealestate", "norealestate"], "myImg6");
 checkPaper(["yesjobfield", "nojobfield"], "myImg7");
 checkPaper(["yesdeposit", "nodeposit"], "myImg8");
-checkPaper(["yescybertracking"], "myImg9");
-checkPaper(["yesvpn"], "myImg10");
-checkPaper(["yespets"], "myImg11");
-checkPaper(["yessecurity"], "myImg12");
-checkPaper(["yeseducation"], "myImg13");
-checkPaper(["yesloan"], "myImg14");
-checkPaper(["yesloan"], "myImg15");
-checkPaper(["yesbureaucracy"], "myImg16");
+checkPaper(
+  ["yescybertracking", "cybertrackingandscore", "nocybertracking"],
+  "myImg9"
+);
+checkPaper(["yesvpn", "novpn"], "myImg10");
+checkPaper(["yespets", "nopets"], "myImg11");
+checkPaper(["yessecurity", "nosecurity"], "myImg12");
+checkPaper(["yeseducation", "noeducation"], "myImg13");
+checkPaper(["yesloan", "noloan"], "myImg14");
+checkPaper(["yesblacklist", "noblacklist"], "myImg15");
+checkPaper(["yesbureaucracy", "nobureaucracy"], "myImg16");
 
 var button1 = new CheckBox("gps", "gpstext", "gps", "gpspost", -10);
 var button2 = new CheckBox(
