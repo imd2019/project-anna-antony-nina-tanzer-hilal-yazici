@@ -1,4 +1,4 @@
-var score = localStorage.getItem("scoreAmount");
+var score = parseInt(localStorage.getItem("scoreAmount"));
 var week = parseInt(localStorage.getItem("currentWeek"));
 
 var answer1 = document.getElementById("antwort1");

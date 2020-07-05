@@ -14,6 +14,7 @@ class Decision {
       })
     );
     this.changeScore(this.diff);
+    this.changeDecisionsAmount(1);
   }
 
   delete() {
@@ -21,6 +22,7 @@ class Decision {
     if (!!x) {
       localStorage.removeItem(this.key);
       this.changeScore(-this.diff);
+      this.changeDecisionsAmount(-1);
     }
   }
 
@@ -29,6 +31,26 @@ class Decision {
       "scoreAmount",
       parseInt(localStorage.getItem("scoreAmount")) + diff
     );
+  }
+
+  changeDecisionsAmount(diff) {
+    localStorage.setItem(
+      "decisionsAmount",
+      parseInt(localStorage.getItem("decisionsAmount")) + diff
+    );
+    this.toggleConfirmButton();
+  }
+
+  toggleConfirmButton() {
+    var woche1 = document.getElementById("weiter");
+    var currentWeek = parseInt(localStorage.getItem("currentWeek"));
+    var decisionsAmount = parseInt(localStorage.getItem("decisionsAmount"));
+
+    if (decisionsAmount === currentWeek * 4) {
+      woche1.style.display = "block";
+    } else {
+      woche1.style.display = "none";
+    }
   }
 }
 

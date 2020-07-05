@@ -5,10 +5,11 @@
 
 body {
   background-image: url(../assets/intro3.png);
-  height: 100%;
-  width: 100%;
   background-repeat: no-repeat;
   background-color: black;
+  height: 1440px;
+  width: 820px;
+  background-size: 100%;
 }
 
 h1 {

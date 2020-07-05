@@ -8,6 +8,16 @@ if (localStorage.getItem("scoreAmount") === null) {
   localStorage.setItem("scoreAmount", "0");
 }
 
+var decisionsMade = localStorage.getItem("decisionsAmount");
+if (localStorage.getItem("decisionsAmount") === null) {
+  localStorage.setItem("decisionsAmount", "0");
+}
+
+if (currentWeek >= 2) {
+  var postits = document.getElementById("postits");
+  postits.style.display = "block";
+}
+
 // Postit White
 
 var postitmodal1 = document.getElementById("PostIt1Modal");
@@ -146,17 +156,20 @@ checkPaper(
   ],
   "myImg5"
 );
-checkPaper(["yesrealestate", "norealestate"], "myImg6");
-checkPaper(["yesjobfield", "nojobfield"], "myImg7");
-checkPaper(["yesdeposit", "nodeposit"], "myImg8");
-checkPaper(["yescybertracking"], "myImg9");
-checkPaper(["yesvpn"], "myImg10");
-checkPaper(["yespets"], "myImg11");
-checkPaper(["yessecurity"], "myImg12");
-checkPaper(["yeseducation"], "myImg13");
-checkPaper(["yesloan"], "myImg14");
-checkPaper(["yesloan"], "myImg15");
-checkPaper(["yesbureaucracy"], "myImg16");
+checkPaper(["realestate", "norealestate"], "myImg6");
+checkPaper(["jobfield", "nojobfield"], "myImg7");
+checkPaper(["deposit", "nodeposit"], "myImg8");
+checkPaper(
+  ["cybertracking", "cybertrackingandscore", "nocybertracking"],
+  "myImg9"
+);
+checkPaper(["vpn", "novpn"], "myImg10");
+checkPaper(["pets", "nopets"], "myImg11");
+checkPaper(["securitypolice", "nosecurity"], "myImg12");
+checkPaper(["education", "noeducation"], "myImg13");
+checkPaper(["loans", "noloans"], "myImg14");
+checkPaper(["blacklist", "noblacklists"], "myImg15");
+checkPaper(["bureaucracy", "nobureaucracy"], "myImg16");
 
 var button1 = new CheckBox("gps", "gpstext", "gps", "gpspost", -10);
 var button2 = new CheckBox(
@@ -593,21 +606,3 @@ var span16 = document.getElementsByClassName("close16")[0];
 span16.onclick = function () {
   modal16.style.display = "none";
 };
-
-function checkboxes() {
-  var inputElems = document.getElementsByTagName("input"),
-    count = 0;
-
-  for (var i = 0; i < inputElems.length; i++) {
-    if (inputElems[i].type == "radio" && inputElems[i].checked == true) {
-      count++;
-    }
-  }
-
-  var woche1 = document.getElementById("weiter");
-  if (count == 4) {
-    woche1.style.display = "block";
-  } else {
-    woche1.style.display = "none";
-  }
-}
