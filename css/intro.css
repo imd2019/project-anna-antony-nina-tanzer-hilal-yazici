@@ -25,11 +25,11 @@ p {
   background-color: black;
   padding: 20px;
   padding-bottom: 110px;
-  padding-right: 120px;
+  padding-right: 110px;
 }
 
 img {
-  position: relative;
+  position: absolute;
   top: 700px;
   left: 1100px;
 }
