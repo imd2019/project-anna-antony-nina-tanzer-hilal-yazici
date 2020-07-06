@@ -692,10 +692,9 @@ progress {
   -moz-appearance: none;
   appearance: none;
   position: absolute;
-  margin-top: 30px;
-  margin-left: 1100px;
-  background-color: #307952 !important;
-  transition: all 0.7s;
+  top: 30px;
+  left: 1200px;
+
   height: 40px;
 }
 progress::-moz-progress-bar {
