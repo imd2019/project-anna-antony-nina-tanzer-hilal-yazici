@@ -1,0 +1,38 @@
+body {
+  background-color: black;
+  width: 100%;
+  color: white;
+  font-family: "Source Code Pro", "Courier New", Courier, monospace;
+  background-image: url(bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text {
+  margin-top: 5%;
+  margin-left: 8%;
+  width: 60%;
+  text-align: left;
+}
+
+h2 {
+  text-align: left;
+  color: #b22222;
+  font-size: 42px;
+  margin-left: 8%;
+}
+
+nav {
+  text-align: right;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+nav a {
+  color: white;
+  margin: 8px;
+}
+
+nav a:hover {
+  color: #b22222;
+}
