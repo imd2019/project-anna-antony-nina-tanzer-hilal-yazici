@@ -686,3 +686,20 @@ body {
   position: absolute;
   display: none;
 }
+
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 1100px;
+  background-color: #307952 !important;
+  transition: all 0.7s;
+  height: 40px;
+}
+progress::-moz-progress-bar {
+  /* for FF ::progress-bar is the value bar */
+  background-color: #307952 !important;
+  transition: all 0.7s;
+}
