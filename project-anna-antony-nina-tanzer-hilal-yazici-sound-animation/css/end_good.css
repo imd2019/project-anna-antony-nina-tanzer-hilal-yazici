@@ -1,0 +1,53 @@
+body {
+  background-image: url(../assets/goodend.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: black;
+  height: 820px;
+  width: 1440px;
+}
+
+.standardtext {
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.box {
+  word-break: normal;
+  color: white;
+  font-family: "Source Code Pro", "Courier New", Courier, monospace;
+  position: absolute;
+  font-size: 14px;
+  left: 855px;
+  top: 30px;
+  overflow: hidden;
+  border: 8px solid white;
+  background-color: black;
+  padding: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: 490px;
+  height: 650px;
+}
+
+.endText {
+  display: none;
+  margin-bottom: -10px;
+}
+
+.fertig {
+  color: #b22222;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Source Code Pro", "Courier New", Courier, monospace;
+  left: 855px;
+  top: 750px;
+  position: absolute;
+  border: none;
+  background-color: black;
+  cursor: pointer;
+}

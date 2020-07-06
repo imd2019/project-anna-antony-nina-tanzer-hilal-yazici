@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../assets/intro4.png);
+  background-repeat: no-repeat;
+  background-color: black;
+  height: 1440px;
+  width: 820px;
+  background-size: 100%;
+}
+
+h1 {
+  word-break: normal;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  position: absolute;
+  font-size: 22px;
+  top: 20px;
+}
+p {
+  word-break: normal;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  position: absolute;
+  font-size: 18px;
+  left: 260px;
+  top: 480px;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 5px solid white;
+  background-color: black;
+  padding: 20px;
+  padding-bottom: 130px;
+  padding-right: 100px;
+}
+
+.container {
+  height: 100vh;
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container img {
+  position: relative;
+  top: 350px;
+  left: 950px;
+  transition: 0.5s;
+}
+
+.container img:hover {
+  transform: scale(1.1);
+}
