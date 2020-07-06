@@ -98,6 +98,10 @@ button {
   margin-left: 80px;
 }
 
+.arrow button {
+  border: none;
+}
+
 .antworttexte p {
   display: none;
 }
