@@ -259,6 +259,7 @@ body {
 
 #postits {
   position: absolute;
+  display: none;
 }
 .postits {
   z-index: 6;
