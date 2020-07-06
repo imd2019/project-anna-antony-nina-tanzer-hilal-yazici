@@ -37,8 +37,20 @@ p {
   padding-right: 130px;
 }
 
-img {
-  position: absolute;
-  top: 700px;
-  left: 1200px;
+.container {
+  height: 100vh;
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container img {
+  position: relative;
+  top: 350px;
+  left: 950px;
+  transition: 0.5s;
+}
+
+.container img:hover {
+  transform: scale(1.1);
 }
