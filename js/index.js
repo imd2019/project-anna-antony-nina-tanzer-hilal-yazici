@@ -1,7 +1,7 @@
 var song;
 
 function preload() {
-  song = loadSound("music/background.mp3");
+  song = loadSound("../music/background.mp3");
 }
 
 function setup() {
