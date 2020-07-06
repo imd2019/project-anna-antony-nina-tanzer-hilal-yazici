@@ -697,7 +697,9 @@ jawaermebild.addEventListener("click", () => {
 });
 
 //button13
-const waermebildgesichtserkennung = document.getElementById("waermebildgesichtserkennung");
+const waermebildgesichtserkennung = document.getElementById(
+  "waermebildgesichtserkennung"
+);
 waermebildgesichtserkennung.addEventListener("click", () => {
   health.value -= 10;
 });
