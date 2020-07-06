@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+}
+
+img {
+  width: 50%;
+}
+
+#camera2 {
+  margin: 0px;
+}
+
+.source {
+  color: white;
+  position: relative;
+  top: 20px;
+}
