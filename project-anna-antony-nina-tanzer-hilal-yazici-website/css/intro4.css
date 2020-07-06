@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../assets/intro4.png);
+  background-repeat: no-repeat;
+  background-color: black;
+  height: 1440px;
+  width: 820px;
+  background-size: 100%;
+}
+
+h1 {
+  word-break: normal;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  position: absolute;
+  font-size: 22px;
+  top: 20px;
+}
+p {
+  word-break: normal;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  position: absolute;
+  font-size: 18px;
+  left: 260px;
+  top: 480px;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 5px solid white;
+  background-color: black;
+  padding: 20px;
+  padding-bottom: 130px;
+  padding-right: 100px;
+}
+
+img {
+  position: absolute;
+  top: 700px;
+  left: 1200px;
+}

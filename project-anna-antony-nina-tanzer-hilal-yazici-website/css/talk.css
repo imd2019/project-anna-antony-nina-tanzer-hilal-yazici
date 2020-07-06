@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.mob1 {
+  position: absolute;
+  left: 120px;
+  top: 370px;
+}
+.mob2 {
+  position: absolute;
+  left: 90px;
+  top: 130px;
+}
+.mob3 {
+  position: absolute;
+  left: 1190px;
+  top: 70px;
+}
+.mob4 {
+  position: absolute;
+  left: 230px;
+  top: 530px;
+}
+.mob5 {
+  position: absolute;
+  left: 320px;
+  top: 40px;
+}
+.mob6 {
+  position: absolute;
+  left: 180px;
+  top: 160px;
+}
+.mob7 {
+  position: absolute;
+  left: 1180px;
+  top: 320px;
+}
+
+#mob8 {
+  margin-left: 1000px;
+}
+
+#mob9 {
+  margin-left: 900px;
+  top: 260px;
+}
+
+#mob10 {
+  margin-left: 1050px;
+  margin-top: 250px;
+}
+
+#mob5,
+#mob6,
+#mob7,
+#mob8,
+#mob9,
+#mob10 {
+  display: block;
+  position: absolute;
+}
+
+.box {
+  word-break: normal;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  position: absolute;
+  font-size: 18px;
+  left: 370px;
+  top: 480px;
+  overflow: hidden;
+  border: 5px solid white;
+  background-color: black;
+  padding: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-right: 120px;
+  width: 550px;
+  height: 220px;
+}
+
+button {
+  border: 5px solid white;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  margin-left: 80px;
+}
+
+.antworttexte p {
+  display: none;
+}
+
+#antwort1,
+#antwort3,
+#antwort5,
+#antwort7 {
+  top: 600px;
+  left: 450px;
+  position: absolute;
+  height: 80px;
+  width: 250px;
+}
+#antwort2,
+#antwort4,
+#antwort6,
+#antwort8 {
+  top: 600px;
+  left: 750px;
+  position: absolute;
+  height: 80px;
+  width: 250px;
+}
+.arrow {
+  position: relative;
+  top: 600px;
+  left: 1000px;
+  display: none;
+}
+
+.speaker {
+  position: absolute;
+  top: 100px;
+  left: 570px;
+}

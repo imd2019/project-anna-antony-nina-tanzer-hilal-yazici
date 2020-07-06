@@ -1,0 +1,68 @@
+body {
+    background-color: #000000;
+    display: flex;
+    color: #ffffff;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    display: flex;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    font-family: "Source Code", "Courier New", Courier, monospace;
+    width: 65%;
+    margin-bottom: 2em;
+    margin-top: 5em;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 28px;
+    font-family: "Source Code", "Courier New", Courier, monospace;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1em;
+    border-width: 5px;
+    border-color: #ffffff;
+}
+
+a:hover {
+    color: red;
+}
+
+.erneut {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.startscreen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.broken {
+    width: 25%;
+    height: auto;
+    margin-top: 3em;
+}
+
+.brokencam {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

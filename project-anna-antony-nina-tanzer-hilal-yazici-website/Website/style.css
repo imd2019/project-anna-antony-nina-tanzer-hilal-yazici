@@ -1,0 +1,59 @@
+body {
+  background-color: black;
+  width: 100%;
+  color: white;
+  font-family: "Source Code Pro", "Courier New", Courier, monospace;
+  background-image: url(bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.heading {
+  height: 500px;
+}
+
+h1 {
+  margin-top: 20%;
+  font-size: 100px;
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+  color: #b22222;
+  font-size: 42px;
+  margin-left: 8%;
+}
+
+.text {
+  margin-top: 3%;
+  margin-left: 8%;
+  width: 60%;
+  text-align: left;
+}
+
+nav {
+  text-align: right;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+nav a {
+  color: white;
+  margin: 8px;
+}
+
+nav a:hover {
+  color: #b22222;
+}
+
+.text2 {
+  margin-top: 3%;
+  margin-left: 8%;
+  width: 60%;
+  text-align: left;
+}
+
+.teampic {
+  margin-left: 120px;
+}

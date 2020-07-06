@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/talk.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <title>Safety First</title>
+  </head>
+  <body>
+    <div class="buttons">
+      <button id="antwort1" onclick="checkantwort('antwort1')">
+        Neue Versprechungen machen
+      </button>
+      <button id="antwort2" onclick="checkantwort('antwort2')">
+        Safety Credits loben
+      </button>
+      <button id="antwort3" onclick="checkantwort('antwort3')">
+        Positive Aspekte der Safety Credits unterstreichen
+      </button>
+      <button id="antwort4" onclick="checkantwort('antwort4')">
+        Die werden sich schon beruhigen, ich ignoriere sie einfach
+      </button>
+      <button id="antwort5" onclick="checkantwort('antwort5')">
+        Nächste Woche treffe ich bessere Entscheidungen
+      </button>
+      <button id="antwort6" onclick="checkantwort('antwort6')">
+        Ich warte noch eine Woche
+      </button>
+      <button id="antwort7" onclick="checkantwort('antwort7')">
+        Pressekonferenz stattfinden lassen
+      </button>
+      <button id="antwort8" onclick="checkantwort('antwort8')">
+        Pressekonferenz absagen
+      </button>
+    </div>
+    <div class="antworttexte">
+      <p id="text1" class="box">
+        Der Akzeptanz-Wert ist gestiegen.
+      </p>
+      <p id="text2" class="box">
+        Der Akzeptanz-Wert ist gesunken.
+      </p>
+      <p id="text3" class="box">
+        Der Akzeptanz-Wert ist gestiegen.
+      </p>
+      <p id="text4" class="box">
+        Der Akzeptanz-Wert ist gesunken.
+      </p>
+      <p id="text5" class="box">
+        Der Akzeptanz-Wert ist gestiegen.
+      </p>
+      <p id="text6" class="box">
+        Der Akzeptanz-Wert ist gesunken.
+      </p>
+      <p id="text7" class="box">
+        Der Akzeptanz-Wert ist gestiegen.
+      </p>
+      <p id="text8" class="box">
+        Der Akzeptanz-Wert ist gesunken.
+      </p>
+    </div>
+    <div class="mob1">
+      <img src="../assets/mob/1.png" id="mob1" />
+    </div>
+    <div class="mob2">
+      <img src="../assets/mob/2.png" id="mob2" />
+    </div>
+    <div class="mob3">
+      <img src="../assets/mob/3.png" id="mob3" />
+    </div>
+    <div class="mob4">
+      <img src="../assets/mob/4.png" height="250px" id="mob4" />
+    </div>
+    <div class="mob5">
+      <img src="../assets/mob/5.png" id="mob5" />
+    </div>
+    <div class="mob6">
+      <img src="../assets/mob/6.png" id="mob6" />
+    </div>
+    <div class="mob7">
+      <img src="../assets/mob/7.png" id="mob7" />
+    </div>
+    <div class="mob8">
+      <img src="../assets/mob/2.png" id="mob8" />
+    </div>
+    <div class="mob9">
+      <img src="../assets/mob/6.png" id="mob9" />
+    </div>
+    <div class="mob10">
+      <img src="../assets/mob/6.png" id="mob10" />
+    </div>
+
+    <div class="arrow" id="woche2">
+      <button class="nextweek" onclick="startNextWeek()">
+        <img src="../assets/pfeil.png" height="80px" />
+      </button>
+    </div>
+
+    <div class="speaker">
+      <img src="../assets/mob/dude.png" />
+    </div>
+    <script src="../js/classes.js"></script>
+    <script src="../js/talk.js "></script>
+  </body>
+</html>
