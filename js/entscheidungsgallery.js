@@ -606,3 +606,229 @@ var span16 = document.getElementsByClassName("close16")[0];
 span16.onclick = function () {
   modal16.style.display = "none";
 };
+
+//Bar
+
+//button1
+const gps = document.getElementById("gps");
+gps.addEventListener("click", () => {
+  health.value -= 10;
+});
+
+//button2
+const datenhinterlegung = document.getElementById("datenhinterlegung");
+datenhinterlegung.addEventListener("click", () => {
+  health.value -= 5;
+});
+
+//button3
+const keins = document.getElementById("keins");
+keins.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button4
+const neinkrankenkasse = document.getElementById("neinkrankenkasse");
+neinkrankenkasse.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button5
+const jakrankenkasse = document.getElementById("jakrankenkasse");
+jakrankenkasse.addEventListener("click", () => {
+  health.value -= 3;
+});
+
+//button6
+const neinkonzerne = document.getElementById("neinkonzerne");
+neinkonzerne.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button7
+const jakonzerne = document.getElementById("jakonzerne");
+jakonzerne.addEventListener("click", () => {
+  health.value -= 10;
+});
+
+//button8
+const neinreise = document.getElementById("neinreise");
+neinreise.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button9
+const jareise = document.getElementById("jareise");
+jareise.addEventListener("click", () => {
+  health.value -= 7;
+});
+
+//button10
+const neinkameras = document.getElementById("neinkameras");
+neinkameras.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button11
+const jagesichtserkennung = document.getElementById("jagesichtserkennung");
+jagesichtserkennung.addEventListener("click", () => {
+  health.value -= 6;
+});
+
+//button12
+const jawaermebild = document.getElementById("jawaermebild");
+jawaermebild.addEventListener("click", () => {
+  health.value -= 8;
+});
+
+//button13
+const waermebildgesichtserkennung = document.getElementById(
+  "waermebildgesichtserkennung"
+);
+waermebildgesichtserkennung.addEventListener("click", () => {
+  health.value -= 10;
+});
+
+//button14
+const jakameras = document.getElementById("jakameras");
+jakameras.addEventListener("click", () => {
+  health.value -= 9;
+});
+
+//button15
+const yesrealestate = document.getElementById("yesrealestate");
+yesrealestate.addEventListener("click", () => {
+  health.value -= 2;
+});
+
+//button16
+const norealestate = document.getElementById("norealestate");
+norealestate.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button17
+const yesjobfield = document.getElementById("yesjobfield");
+yesjobfield.addEventListener("click", () => {
+  health.value += 3;
+});
+
+//button18
+const nojobfield = document.getElementById("nojobfield");
+nojobfield.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button19
+const yesdeposit = document.getElementById("yesdeposit");
+yesdeposit.addEventListener("click", () => {
+  health.value += 6;
+});
+
+//button20
+const nodeposit = document.getElementById("nodeposit");
+nodeposit.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button21
+const yescybertracking = document.getElementById("yescybertracking");
+yescybertracking.addEventListener("click", () => {
+  health.value -= 9;
+});
+
+//button22
+const cybertrackingandscore = document.getElementById("cybertrackingandscore");
+cybertrackingandscore.addEventListener("click", () => {
+  health.value -= 10;
+});
+
+//button23
+const nocybertracking = document.getElementById("nocybertracking");
+nocybertracking.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button24
+const yesvpn = document.getElementById("yesvpn");
+yesvpn.addEventListener("click", () => {
+  health.value -= 7;
+});
+
+//button25
+const novpn = document.getElementById("novpn");
+novpn.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button26
+const yespets = document.getElementById("yespets");
+yespets.addEventListener("click", () => {
+  health.value -= 3;
+});
+
+//button27
+const nopets = document.getElementById("nopets");
+nopets.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button28
+const yessecurity = document.getElementById("yessecurity");
+yessecurity.addEventListener("click", () => {
+  health.value -= 7;
+});
+
+//button29
+const nosecurity = document.getElementById("nosecurity");
+nosecurity.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button30
+const yeseducation = document.getElementById("yeseducation");
+yeseducation.addEventListener("click", () => {
+  health.value -= 4;
+});
+
+//button31
+const noeducation = document.getElementById("noeducation");
+noeducation.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button32
+const yesloan = document.getElementById("yesloan");
+yesloan.addEventListener("click", () => {
+  health.value -= 5;
+});
+
+//button33
+const noloan = document.getElementById("noloan");
+noloan.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button34
+const yesblacklist = document.getElementById("yesblacklist");
+yesblacklist.addEventListener("click", () => {
+  health.value -= 4;
+});
+
+//button35
+const noblacklist = document.getElementById("noblacklist");
+noblacklist.addEventListener("click", () => {
+  health.value += 1;
+});
+
+//button36
+const yesbureaucracy = document.getElementById("yesbureaucracy");
+yesbureaucracy.addEventListener("click", () => {
+  health.value -= 3;
+});
+
+//button37
+const nobureaucracy = document.getElementById("nobureaucracy");
+nobureaucracy.addEventListener("click", () => {
+  health.value += 1;
+});
