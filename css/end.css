@@ -63,8 +63,8 @@ a:hover {
 
 .cam1 {
   position: absolute;
-  left: 610px;
-  top: 421px;
+  left: 540px;
+  top: 481px;
   width: 780px;
   animation-name: Cam1;
   animation-duration: 3s;
@@ -75,8 +75,8 @@ a:hover {
 
 .cam2 {
   position: absolute;
-  left: 750px;
-  top: 440px;
+  left: 690px;
+  top: 500px;
   width: 900px;
   animation-name: Cam2;
   animation-duration: 3s;
