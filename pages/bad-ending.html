@@ -12,6 +12,10 @@
       type="text/javascript"
       src="../js/index.js"
     ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -22,13 +26,24 @@
       </h1>
     </div>
 
-    <div class="erneut"><a href="start.html">Erneut versuchen</a></div>
-    <div class="startscreen"><a href="start.html">Start</a></div>
+    <div class="erneut">
+      <a href="start.html" onclick="restart()">Erneut versuchen</a>
+    </div>
+    <div class="startscreen">
+      <a href="start.html" onclick="restart()">Start</a>
+    </div>
     <div class="cam1">
       <img src="../assets/cam_1.png" class="broken" />
     </div>
     <div class="cam2">
       <img src="../assets/cam_2.png" class="broken" />
     </div>
+
+    <script>
+      function restart() {
+        window.location.href = "start.html";
+        window.localStorage.clear();
+      }
+    </script>
   </body>
 </html>
