@@ -18,13 +18,13 @@ p {
   position: absolute;
   font-size: 18px;
   left: 270px;
-  top: 480px;
+  top: 530px;
   white-space: nowrap;
   overflow: hidden;
   border: 5px solid white;
   background-color: black;
   padding: 20px;
-  padding-bottom: 110px;
+  padding-bottom: 50px;
   padding-right: 110px;
 }
 

@@ -26,15 +26,15 @@ p {
   font-family: "Source Code Pro", monospace;
   position: absolute;
   font-size: 18px;
-  left: 270px;
-  top: 480px;
+  left: 290px;
+  top: 530px;
   white-space: nowrap;
   overflow: hidden;
   border: 5px solid white;
   background-color: black;
   padding: 20px;
   padding-bottom: 120px;
-  padding-right: 130px;
+  padding-right: 110px;
 }
 
 .container {
