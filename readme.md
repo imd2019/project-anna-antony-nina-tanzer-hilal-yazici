@@ -10,3 +10,9 @@ Oben rechts auf "Simulation" klicken!
 /assets -> alle Bilder und Grafiken
 /css -> alle css Dateien
 /js -> alle js Dateien
+
+## Bekannte Fehler:
+
+Nach Gesprächsoption beim Aufstands-Szenario rückt Speaker nach unten.
+
+- Irgendein Element falsch positioniert?
